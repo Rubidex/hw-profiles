@@ -1,0 +1,172 @@
+{
+  "meta": {
+    "device": "Controller",
+    "manufacturer": "Meitav-Tec",
+    "make": "MTS",
+    "model": "MTS(V)(C)(24)/SUPER",
+    "sku": "",
+    "address_type": "Thermostat",
+    "communication_protocol": "Modbus"
+  },
+  "registers": [
+    {
+      "name": "AO_Cool",
+      "influx_name": "value2",
+      "address_type": "Register",
+      "address": "0001",
+      "min_value": 0,
+      "max_value": 100,
+      "units": "%",
+      "data_type": "Word",
+      "multiplier": 1,
+      "rw": "R"
+    },
+    {
+      "name": "AO_Heat",
+      "influx_name": "value2",
+      "address_type": "Register",
+      "address": "0002",
+      "min_value": 0,
+      "max_value": 100,
+      "units": "%",
+      "data_type": "Word",
+      "multiplier": 1,
+      "rw": "R"
+    },
+    {
+      "name": "AO_Fan",
+      "influx_name": "value2",
+      "address_type": "Register",
+      "address": "0003",
+      "min_value": 0,
+      "max_value": 100,
+      "units": "%",
+      "data_type": "Word",
+      "multiplier": 1,
+      "rw": "R"
+    },
+    {
+      "name": "SetPointCool",
+      "influx_name": "value2",
+      "address_type": "Register",
+      "address": "0005",
+      "min_value": 5,
+      "max_value": 35,
+      "units": "°C/°F",
+      "multiplier": 0.1,
+      "data_type": "Word",
+      "default": 23,
+      "action_range": 2,
+      "rw": "rw"
+    },
+    {
+      "name": "SetPointHeat",
+      "influx_name": "value2",
+      "address_type": "Register",
+      "address": "0006",
+      "min_value": 5,
+      "max_value": 35,
+      "units": "°C/°F",
+      "multiplier": 0.1,
+      "data_type": "Word",
+      "default": 22,
+      "action_range": 2,
+      "rw": "rw"
+    },
+    {
+      "name": "Mode",
+      "influx_name": "value2",
+      "address_type": "Register",
+      "address": "0009",
+      "min_value": 0,
+      "max_value": 3,
+      "units": "state",
+      "multiplier": 1,
+      "data_type": "Word",
+      "rw": "rw",
+      "default": 1,
+      "action_range": 0,
+      "states": {
+        "0": "Fan",
+        "1": "Cool",
+        "2": "Heat",
+        "3": "Auto"
+      }
+    },
+    {
+      "name": "FanSpeed",
+      "influx_name": "value2",
+      "address_type": "Register",
+      "address": "000B",
+      "min_value": 0,
+      "max_value": 3,
+      "units": "state",
+      "multiplier": 1,
+      "data_type": "Word",
+      "rw": "rw",
+      "default": 0,
+      "action_range": 0,
+      "states": {
+        "0": "Auto",
+        "1": "Low",
+        "2": "Medium",
+        "3": "High"
+      }
+    },
+    {
+      "name": "Occupancy",
+      "influx_name": "value2",
+      "address_type": "Register",
+      "address": "0012",
+      "min_value": 0,
+      "max_value": 2,
+      "units": "state",
+      "multiplier": 1,
+      "data_type": "Word",
+      "rw": "R",
+      "states": {
+        "0": "Occupied",
+        "1": "Unoccupied",
+        "2": "Temporary"
+      }
+    },
+    {
+      "name": "FanState",
+      "influx_name": "value2",
+      "address_type": "Register",
+      "address": "000e",
+      "min_value": 0,
+      "max_value": 3,
+      "units": "state",
+      "multiplier": 1,
+      "data_type": "Word",
+      "rw": "rw",
+      "default": 0,
+      "action_range": 0,
+      "states": {
+        "0": "Low",
+        "1": "Med",
+        "2": "High",
+        "3": "Auto"
+      }
+    },
+    {
+      "name": "C_F_Scale",
+      "influx_name": "value2",
+      "address_type": "Register",
+      "address": "005A",
+      "min_value": 0,
+      "max_value": 1,
+      "units": "state",
+      "multiplier": 1,
+      "data_type": "Word",
+      "rw": "rw",
+      "default": 0,
+      "action_range": 0,
+      "states": {
+        "0": "°F",
+        "1": "°C"
+      }
+    }
+  ]
+}

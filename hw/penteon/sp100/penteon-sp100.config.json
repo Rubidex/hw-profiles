@@ -1,0 +1,61 @@
+{
+  "meta": {
+    "device": "Sensor",
+    "manufacturer": "Penteon",
+    "make": "SP100 Series",
+    "model": "SP100-v1.2",
+    "sku": "SP100-Nov2023",
+    "type": "Solar Panel Performance Meter",
+    "communication_protocol": "Modbus"
+  },
+  "registers": [
+    {
+      "name": "Panel Voltage",
+      "influx_name": "value2",
+      "address_type": "Coil",
+      "address": "1103",
+      "min_value": 0,
+      "max_value": 50,
+      "units": "V",
+      "data_type": "Word",
+      "multiplier": 0.01,
+      "rw": "r"
+    },
+    {
+      "name": "Panel Current",
+      "influx_name": "value2",
+      "address_type": "Coil",
+      "address": "1104",
+      "min_value": 0,
+      "max_value": 50,
+      "units": "A",
+      "data_type": "Word",
+      "multiplier": 0.01,
+      "rw": "r"
+    },
+    {
+      "name": "Device Address",
+      "influx_name": "value2",
+      "address_type": "Register",
+      "address": "2002",
+      "min_value": 0,
+      "max_value": "FF",
+      "units": "addr",
+      "data_type": "Word",
+      "multiplier": 1,
+      "rw": "rw"
+    },
+    {
+      "name": "Comm Rate",
+      "influx_name": "value2",
+      "address_type": "Register",
+      "address": "2003",
+      "min_value": 0,
+      "max_value": 6,
+      "units": "bps",
+      "data_type": "Word",
+      "multiplier": 1,
+      "rw": "rw"
+    }
+  ]
+}
