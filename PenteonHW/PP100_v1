@@ -1,3 +1,89 @@
 # Penteon Power Panel Hardware Profile
 # A JSON Configuration Document
-# Version 0.96 test
+# Submitted by Clay - likely edited by Carlos since this initial commit. 
+# Needs to be updated to Carlos' version.
+# Version 0.96 test March 2024
+
+{
+  "meta": {
+    "device": "Sensor",
+    "manufacturer": "Penteon",
+    "make": "RG350 Series",
+    "model": "Gen5",
+    "sku": "RG350-Gen5-Dec2023",
+    "type": "Generic Modbus Gateway",
+    "communication_protocol": "Modbus"
+  },
+  "registers": [
+    {
+      "name": "Value 0",
+      "influx_name": "value2",
+      "address_type": "Register",
+      "address": "1100",
+      "min_value": 0,
+      "max_value": 255,
+      "units": "*",
+      "data_type": "Word",
+      "multiplier": .1,
+      "rw": "r"
+    },
+    {
+      "name": "Value 1",
+      "influx_name": "value2",
+      "address_type": "Register",
+      "address": "1101",
+      "min_value": 0,
+      "max_value": 255,
+      "units": "*",
+      "data_type": "Word",
+      "multiplier": .1,
+      "rw": "r"
+    },
+    {
+      "name": "Value 2",
+      "influx_name": "value2",
+      "address_type": "Register",
+      "address": "1102",
+      "min_value": 0,
+      "max_value": 255,
+      "units": "*",
+      "data_type": "Word",
+      "multiplier": .1,
+      "rw": "r"
+    },
+    {
+      "name": "Value 3",
+      "influx_name": "value2",
+      "address_type": "Register",
+      "address": "1103",
+      "min_value": 0,
+      "max_value": 255,
+      "units": "*",
+      "data_type": "Word",
+      "multiplier": .1,
+      "rw": "r"
+    },
+    {
+      "name": "Device Address",
+      "influx_name": "value2",
+      "address_type": "Register",
+      "address": "2002",
+      "min_value": 00,
+      "max_value": FF,
+      "units": "addr",
+      "data_type": "Word",
+      "multiplier": 1,
+      "rw": "rw"
+    },
+    \{
+      "name": "Comm Rate",
+      "influx_name": "value2",
+      "address_type": "Register",
+      "address": "2003",
+      "min_value": 00,
+      "max_value": 06,
+      "units": "bps",
+      "data_type": "Word",
+      "multiplier": 1,
+      "rw": "rw"
+    }
