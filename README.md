@@ -15,6 +15,10 @@ The meta section contains metadata about the device:
 - `sku`: The Stock Keeping Unit, if applicable.
 - `type`: The type of device.
 - `communication_protocol`: The communication protocol used by the device.
+- 'document_version': 1.1: New Apr 15-2024, Clay added this to track version compatibility
+- 'document_timestamp': 1713219896:   New Apr 15-2024 Clay added this to track versions
+- 'comment': " Penteon indoor air quality sensor":  New Apr 15-2024 Clay addes this for additional detail on the device itself.  May be useful for the customer if displayed on the web interface for explaination of what the device is.
+
 
 ##### Supported device types
 
@@ -22,13 +26,14 @@ The meta section contains metadata about the device:
 | ---------------------- |
 | Thermostat             |
 | Power Meter            |
-| HVAC                   |
+| HVAC Controls          | // modified by Clay April 15, 2024
 | Fire Alarm             |
 | Elevator               |
 | EV Charger             |
 | Water Meter            |
 | Gas Meter              |
 | Power Meter            |
+| Air Quality Sensor     | // Added by Clay April 15, 2024
 | Humidity Sensor        |
 | Solar Panel            |
 | Heat Pump              |
