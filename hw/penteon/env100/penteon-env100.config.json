@@ -1,0 +1,148 @@
+{
+  "meta": {
+    "device": "Sensor",
+    "manufacturer": "Penteon",
+    "make": "Env100 Series",
+    "model": "env100-v1.0",
+    "sku": "Env100-Mar2024",
+    "document_version": 1.1,
+    "document_timestamp": 1713219896, 
+    "type": "Indoor Environmental Air Quality Sensor",
+    "communication_protocol": "Modbus"
+  },
+  "registers": [
+    {
+      "name": "Temperature",
+      "influx_name": "value2",
+      "address_type": "Coil",
+      "address": "1101",
+      "min_value": 0,
+      "max_value": 8000,
+      "units": "°C",
+      "data_type": "Word",
+      "multiplier": 0.01,
+      "rw": "r"
+    },
+    {
+      "name": "Humidity",
+      "influx_name": "value2",
+      "address_type": "Coil",
+      "address": "1102",
+      "min_value": 0,
+      "max_value": 10000,
+      "units": "%RH",
+      "data_type": "Word",
+      "multiplier": 0.01,
+      "rw": "r"
+    },
+    {
+      "name": "CO2",
+      "influx_name": "value2",
+      "address_type": "Coil",
+      "address": "1103",
+      "min_value": 400,
+      "max_value": 2000,
+      "units": "ppm",
+      "data_type": "Word",
+      "multiplier": 1,
+      "rw": "r"
+    },
+    {
+      "name": "Particulates PM1",
+      "influx_name": "value2",
+      "address_type": "Coil",
+      "address": "1104",
+      "min_value": 0,
+      "max_value": 10000,
+      "units": "ppm",
+      "data_type": "Word",
+      "multiplier": 0.01,
+      "rw": "r"
+    },
+    {
+      "name": "Particulates PM2.5",
+      "influx_name": "value2",
+      "address_type": "Coil",
+      "address": "1105",
+      "min_value": 0,
+      "max_value": 10000,
+      "units": "ppm",
+      "data_type": "Word",
+      "multiplier": 0.01,
+      "rw": "r"
+    },
+    {
+      "name": "Particulates PM4",
+      "influx_name": "value2",
+      "address_type": "Coil",
+      "address": "1106",
+      "min_value": 0,
+      "max_value": 10000,
+      "units": "pp",
+      "data_type": "Word",
+      "multiplier": 0.01,
+      "rw": "r"
+    },
+    {
+      "name": "Particulates PM10",
+      "influx_name": "value2",
+      "address_type": "Coil",
+      "address": "1107",
+      "min_value": 0,
+      "max_value": 10000,
+      "units": "ppm",
+      "data_type": "Word",
+      "multiplier": 0.01,
+      "rw": "r"
+    },
+    {
+      "name": "Volatitile Organic Compounds",
+      "influx_name": "value2",
+      "address_type": "Coil",
+      "address": "1108",
+      "min_value": 0,
+      "max_value": 10000,
+      "units": "ppm",
+      "data_type": "Word",
+      "multiplier": 1,
+      "rw": "r"
+    },
+    {
+      "name": "Nitrous Oxide Gases",
+      "influx_name": "value2",
+      "address_type": "Coil",
+      "address": "1109",
+      "min_value": 0,
+      "max_value": 10000,
+      "units": "ppm",
+      "data_type": "Word",
+      "multiplier": 0.01,
+      "rw": "r"
+    },
+
+    {
+      "name": "Modbus Address",
+      "influx_name": "value2",
+      "address_type": "Register",
+      "address": "2002",
+      "min_value": 0,
+      "max_value": "FF",
+      "units": "addr",
+      "data_type": "Word",
+      "multiplier": 1,
+      "rw": "rw"
+    },
+    {
+      "name": "BaudRate",
+      "influx_name": "value2",
+      "address_type": "Register",
+      "address": "2003",
+      "min_value": 0,
+      "max_value": 6,
+      "units": "bps",
+      "data_type": "Word",
+      "multiplier": 1,
+      "rw": "rw"
+    }
+  ]
+}
