@@ -6,7 +6,7 @@
     "model": "env100-v1.0",
     "sku": "Env100-Mar2024",
     "document_version": 1.1,
-    "document_timestamp": 1713219896, 
+    "document_timestamp": 1713219896,
     "type": "Indoor Environmental Air Quality Sensor",
     "communication_protocol": "Modbus"
   },
