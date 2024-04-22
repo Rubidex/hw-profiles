@@ -5,7 +5,7 @@
     "make": "MTS",
     "model": "MTS(V)(C)(24)/SUPER",
     "sku": "",
-    "address_type": "Thermostat",
+    "type": "Thermostat",
     "communication_protocol": "Modbus"
   },
   "registers": [
