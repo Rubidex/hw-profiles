@@ -3,7 +3,7 @@
     "device": "Sensor",
     "manufacturer": "Penteon",
     "make": "RG350 Series",
-    "model": "Gen5",
+    "model": "RG350-Gen5",
     "sku": "RG350-Gen5-Dec2023",
     "type": "Generic Modbus Gateway",
     "communication_protocol": "Modbus"
