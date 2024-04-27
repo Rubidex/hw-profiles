@@ -6,10 +6,11 @@
     "model": "env100-v1.0",
     "sku": "Env100-Mar2024",
     "document_version": 1.1,
-    "document_timestamp": 1713219896, 
+    "document_timestamp": 1714185265, 
     "type": "Indoor Environmental Air Quality Sensor",
     "communication_protocol": "Modbus"
   },
+  
   "registers": [
     {
       "name": "Temperature",
@@ -123,6 +124,19 @@
       "max_value": 10000,
       "default_value": 0,
       "units": "ppm",
+      "data_type": "Word",
+      "multiplier": 1,
+      "rw": "r"
+    },
+    {
+      "name": "Differential Pressure",
+      "influx_name": "value2",
+      "address_type": "Coil",
+      "address": "110a",
+      "min_value": -5000,
+      "max_value": 5000,
+      "default_value": 0,
+      "units": "kPa",
       "data_type": "Word",
       "multiplier": 1,
       "rw": "r"
