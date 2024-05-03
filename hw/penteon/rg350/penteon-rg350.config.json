@@ -18,7 +18,7 @@
       "max_value": 255,
       "units": "*",
       "data_type": "Word",
-      "multiplier": 0.1,
+      "multiplier": 0.01,
       "rw": "r"
     },
     {
@@ -30,7 +30,7 @@
       "max_value": 255,
       "units": "*",
       "data_type": "Word",
-      "multiplier": 0.1,
+      "multiplier": 0.01,
       "rw": "r"
     },
     {
@@ -42,7 +42,7 @@
       "max_value": 255,
       "units": "*",
       "data_type": "Word",
-      "multiplier": 0.1,
+      "multiplier": 0.01,
       "rw": "r"
     },
     {
@@ -54,7 +54,7 @@
       "max_value": 255,
       "units": "*",
       "data_type": "Word",
-      "multiplier": 0.1,
+      "multiplier": 0.01,
       "rw": "r"
     },
     {
