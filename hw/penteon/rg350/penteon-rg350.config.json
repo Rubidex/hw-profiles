@@ -5,6 +5,8 @@
     "make": "RG350 Series",
     "model": "RG350-Gen5",
     "sku": "RG350-Gen5-Dec2023",
+    "document_version": 1.1,
+    "document_timestamp": 1713219896,
     "type": "Generic Modbus Gateway",
     "communication_protocol": "Modbus"
   },
