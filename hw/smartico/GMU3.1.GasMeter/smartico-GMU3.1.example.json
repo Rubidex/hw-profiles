@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "device": "Sensor",
+    "manufacturer": "Smartico",
+    "make": "Ultrasonic Gas Meter",
+    "model": "GG-1.6, G-2.5, G-4.0, G-6.0",
+    "sku": "GMU3.1",
+    "type": "Gas Meter",
+    "communication_protocol": "Direct"
+  },
+  "processing": [
+    {"name": "MQTT",
+      "code": "msg.device = msg.payload.devEUI"; 
+      msg.rssi = msg.payload.rxInfo[0].rssi;
+    }
+    {
+      "name": "Proc_Main",
+      "code": "msg.device = msg.payload.devEUI; 
+      msg.rssi = msg.payload.rxInfo[0].rssi;
+      msg.gateway = msg.payload.rxInfo[0].gatewayID;
+      msg.freq = msg.payload.txInfo.frequency/1000;
+      msg.raw = msg.payload.data;
+
+      let TS = new Date();
+      TS = TS.getTime()/1000;
+      msg.stamp = String(TS.toFixed(0));
+
+      // Convert Base64 into Buffer
+      const base64Encoded = msg.payload.data;
+      const decodedData = Buffer.from(base64Encoded, 'base64');
+      msg.payload.data = decodedData;
+
+      // Decode Data
+      msg.FullDevAddr = msg.device
+      var gasValue=0
+      var temp=0
+
+      var len = msg.payload.data.length
+      var status1 = msg.payload.data[0].toString(2).padStart(8, '0');
+      var status2 = msg.payload.data[1].toString(2).padStart(8, '0');
+      var model = msg.payload.data[2].toString(2).padStart(8, '0');
+      var serial = msg.payload.data[3].toString(16).padStart(2, '0') + msg.payload.data[4].toString(16).padStart(2, '0') + msg.payload.data[5].toString(16).padStart(2, '0')
+
+      node.warn("stat1" + status1 + "stat2 " + status2 + "mod: "+ model + "ser: " + serial)
+      var stat1 = status1.split("");
+      node.warn ("Stat1: " + stat1[5])
+      msg.FLG_LOW_BAT = stat1[7]
+
+
+      gasValue = msg.payload.data[6].toString(16) + msg.payload.data[7].toString(16) + msg.payload.data[8].toString(16) + msg.payload.data[9].toString(16);
+
+      if (len == 12){
+        temp = msg.payload.data[11].toString(16) + msg.payload.data[12].toString(16)
+      }
+
+      msg.gasValue = parseInt(gasValue,16)/1000
+      msg.temp = parseInt(temp)
+
+
+      // Create JSON for Influx
+      msg.measurement = msg.device
+      msg.payload = [{
+        gateway: msg.gateway,
+        rssi: msg.rssi,
+        stamp: msg.stamp,
+        freq: msg.freq,
+        gasMeter: msg.gasValue,
+        temperature: msg.temp,
+        raw: msg.raw
+      }];
+
+      return msg;"
+    }
+  ]
+}
