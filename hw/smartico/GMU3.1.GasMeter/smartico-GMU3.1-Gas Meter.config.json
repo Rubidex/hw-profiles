@@ -20,7 +20,7 @@
       "data_type": "Word",
       "multiplier": 1,
       "rw": "r",
-      "report_interval": "[User_Defined]"
+      "report_interval": 3600
     },
     {
       "name": "FLG_MOTION_DETECT",
@@ -130,7 +130,7 @@
       "multiplier": 1,
       "rw": "r"
     },
-     {
+    {
       "name": "FLG_POWER_ON",
       "influx_name": "FLG_POWER_ON",
       "address_type": "Register",
@@ -207,8 +207,8 @@
       "influx_name": "Volume",
       "address_type": "Register",
       "address": "1000",
-      "min_value": "00000000",
-      "max_value": "FFFFFFFF",
+      "min_value": 0,
+      "max_value": 99999999,
       "units": "litres3",
       "data_type": "integer",
       "multiplier": 0.001,
@@ -219,9 +219,9 @@
       "influx_name": "Temp",
       "address_type": "Register",
       "address": "1001",
-      "min_value": "00",
-      "max_value": "FF",
-      "units": "°Ç",
+      "min_value": -20,
+      "max_value": 50,
+      "units": "°C",
       "data_type": "integer",
       "multiplier": 0.01,
       "rw": "r"
