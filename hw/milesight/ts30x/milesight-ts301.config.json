@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "device": "Sensor",
+    "manufacturer": "Milesight",
+    "make": "TS30x Series",
+    "model": "TS301-915",
+    "sku": "",
+    "type": "Thermostat",
+    "communication_protocol": "Direct"
+  },
+  "registers": [
+    {
+      "name": "battery",
+      "influx_name": "battery",
+      "address_type": "Register",
+      "address": "0000",
+      "min_value": 0,
+      "max_value": 100,
+      "units": "%",
+      "data_type": "Word",
+      "multiplier": 1,
+      "rw": "r",
+      "report_interval": 3600
+    },
+    {
+      "name": "Temperature_ch1",
+      "influx_name": "temp_ch1",
+      "address_type": "Register",
+      "address": "0001",
+      "min_value": 0,
+      "max_value": 1,
+      "units": "°Ç",
+      "data_type": "Word",
+      "multiplier": 0.1,
+      "rw": "r",
+      "report_interval": 3600
+    },
+    {
+      "name": "Magnet_ch1",
+      "influx_name": "mag_ch1",
+      "address_type": "Register",
+      "address": "0002",
+      "min_value": 0,
+      "max_value": 1,
+      "units": "#",
+      "data_type": "Word",
+      "multiplier": 1,
+      "rw": "r",
+      "report_interval": 3600
+    },
+    {
+      "name": "Temperature_ch2",
+      "influx_name": "temp_ch2",
+      "address_type": "Register",
+      "address": "0003",
+      "min_value": 0,
+      "max_value": 100,
+      "units": "°C",
+      "data_type": "Word",
+      "multiplier": 0.1,
+      "rw": "r",
+      "report_interval": 3600
+    },
+    {
+      "name": "Magnet_ch2",
+      "influx_name": "mag_ch1",
+      "address_type": "Register",
+      "address": "0004",
+      "min_value": 0,
+      "max_value": 1,
+      "units": "#",
+      "data_type": "Word",
+      "multiplier": 1,
+      "rw": "r",
+      "report_interval": 3600
+    },
+    {
+      "name": "TempAlarm_ch1",
+      "influx_name": "temp_alarm_ch1",
+      "address_type": "Register",
+      "address": "0005",
+      "min_value": 0,
+      "max_value": 3,
+      "units": "#",
+      "data_type": "Word",
+      "multiplier": 1,
+      "rw": "r",
+      "report_interval": 3600
+    },
+    {
+      "name": "TempAlarm_ch2",
+      "influx_name": "temp_alarm_ch2",
+      "address_type": "Register",
+      "address": "0006",
+      "min_value": 0,
+      "max_value": 3,
+      "units": "#",
+      "data_type": "Word",
+      "multiplier": 1,
+      "rw": "r",
+      "report_interval": 3600
+    }
+  ]
+}
