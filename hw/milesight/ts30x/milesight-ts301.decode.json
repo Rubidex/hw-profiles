@@ -1,0 +1,84 @@
+{
+  "meta": {
+    "device": "Sensor",
+    "manufacturer": "Milesight",
+    "make": "Temperature Sensor",
+    "desc": "This sensor sends multiple values at the same time beginning with the ID and type as a 2 digit Hex reference, then the value",
+    "model": "TS-30x",
+    "sku": "TS-301",
+    "type": "Temperature Sensor",
+    "communication_protocol": "Direct",
+    "packetType": "Base64",
+    "decodeItems": 2,
+    "decode": ["0175", "0367"]
+  },
+  "0175": {
+    "message_Name": "Message_Up",
+    "decodedLen": 1,
+    "payload": 
+      {
+        "payload_1_Len": 1,
+        "payload1Name": "battery",
+        "payloadType": "Integer",
+        "payloadDesc": "Battery Level in %",
+        "value0": "batteryT"
+      }
+  },
+  "0367": {
+    "message_Name": "Temperature_Ch1",
+    "decodedLen": 2,
+    "payload": 
+      {
+        "payload1": {
+          "payload_1_Len": 2,
+          "payload1Name": "Temperature_Ch1",
+          "payloadType": "Integer",
+          "payloadDesc": "Current Temperature Channel1",
+          "value0": "temperature_ch1"
+        }
+      }
+    },
+    "0300": {
+    "message_Name": "Magnet_Status_Ch1",
+    "decodedLen": 1,
+    "payload": 
+      {
+        "payload1": {
+          "payload_1_Len": 1,
+          "payload1Name": "Mag_Stat_Ch1",
+          "payloadType": "Integer",
+          "payloadDesc": "Mag_Stat_Ch1",
+          "value0": "mag_stat_ch1"
+        }
+      }
+    },
+    "0467": {
+    "message_Name": "Temperature_ch2",
+    "decodedLen": 2,
+    "payload": 
+      {
+        "payload1": {
+          "payload_1_Len": 2,
+          "payload1Name": "Temperature_Ch2",
+          "payloadType": "Integer",
+          "payloadDesc": "Current Temperature Channel2",
+          "value0": "temperature_ch2"
+        }
+      }
+    },
+     "0400": {
+    "message_Name": "Magnet_Status_Ch2",
+    "decodedLen": 1,
+    "payload": 
+      {
+        "payload1": {
+          "payload_1_Len": 1,
+          "payload1Name": "Mag_Stat_Ch2",
+          "payloadType": "Integer",
+          "payloadDesc": "Mag_Stat_Ch2",
+          "value0": "mag_stat_ch2"
+        }
+      }
+    },
+  }
+}
