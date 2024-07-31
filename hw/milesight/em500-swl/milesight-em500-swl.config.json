@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "device": "Sensor",
+    "manufacturer": "Milesight",
+    "make": "EM500 Series",
+    "model": "EM500-SWL-915",
+    "sku": "EM500-SWL-915",
+    "type": "Water Level Sensor",
+    "communication_protocol": "MQTT"
+  },
+  "registers": [
+    {
+      "name": "battery",
+      "influx_name": "battery",
+      "address_type": "Register",
+      "address": "0000",
+      "min_value": 0,
+      "max_value": 100,
+      "units": "%",
+      "data_type": "Word",
+      "multiplier": 1,
+      "rw": "r",
+      "report_interval": 3600
+    },
+    {
+      "name": "Water Level",
+      "influx_name": "waterlevel",
+      "address_type": "Register",
+      "address": "0001",
+      "min_value": 0,
+      "max_value": 1,
+      "units": "°Ç",
+      "data_type": "Word",
+      "multiplier": 1,
+      "rw": "r",
+      "report_interval": 3600
+    }
+  ]
+}

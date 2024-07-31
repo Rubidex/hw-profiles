@@ -1,0 +1,42 @@
+{
+  "meta": {
+    "device": "Sensor",
+    "manufacturer": "Milesight",
+    "make": "Floor Leak Sensor",
+    "desc": "This sensor sends multiple values at the same time beginning with the ID and type as a 2 digit Hex reference, then the value",
+    "model": "EM300-MLD",
+    "sku": "EM300-MLD",
+    "type": "Floor Leak Sensor",
+    "communication_protocol": "MQTT",
+    "packetType": "Base64",
+    "decodeItems": 2,
+    "decode": ["0175", "0600"]
+  },
+  "0175": {
+    "message_Name": "Message_Up",
+    "decodedLen": 1,
+    "payload": 
+      {
+        "payload_Len": 1,
+        "payload1Name": "battery",
+        "payloadType": "Integer",
+        "payloadDesc": "Battery Level in %",
+        "value0": "batteryT"
+      }
+  },
+    "0600": {
+    "message_Name": "LeakStatus",
+    "decodedLen": 1,
+    "payload": 
+      {
+        "payload1": {
+          "payload_Len": 1,
+          "payload1Name": "leakStatus",
+          "payloadType": "Integer",
+          "payloadDesc": "Leak Status",
+          "value0": "leakStatus"
+        }
+      }
+    }
+  }
+}

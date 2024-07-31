@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "device": "Sensor",
+    "manufacturer": "Milesight",
+    "make": "Temperature Sensor",
+    "desc": "This sensor sends multiple values at the same time beginning with the ID and type as a 2 digit Hex reference, then the value",
+    "model": "TS-30x",
+    "sku": "TS-301",
+    "type": "Temperature Sensor",
+    "communication_protocol": "Direct",
+    "packetType": "Base64",
+    "decodeItems": 3,
+    "decode": ["0175", "0367", "0468"]
+  },
+  "0175": {
+    "message_Name": "Message_Up",
+    "decodedLen": 1,
+    "payload": 
+      {
+        "payload_Len": 1,
+        "payload1Name": "battery",
+        "payloadType": "Integer",
+        "payloadDesc": "Battery Level in %",
+        "value0": "batteryT"
+      }
+  },
+  "0367": {
+    "message_Name": "Temperature",
+    "decodedLen": 2,
+    "payload": 
+      {
+        "payload1": {
+          "payload_Len": 2,
+          "payload1Name": "Temperature",
+          "payloadType": "Integer",
+          "payloadDesc": "Current Temperature",
+          "value0": "temp"
+        }
+      }
+    },
+    "0468": {
+    "message_Name": "Humidity",
+    "decodedLen": 1,
+    "payload": 
+      {
+        "payload1": {
+          "payload_Len": 1,
+          "payload1Name": "Humidity",
+          "payloadType": "Integer",
+          "payloadDesc": "Current Humidity",
+          "value0": "humidity"
+        }
+      }
+    }
+  }
+}

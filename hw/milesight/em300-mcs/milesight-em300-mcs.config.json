@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "device": "Sensor",
+    "manufacturer": "Milesight",
+    "make": "EM300 Series",
+    "model": "EM300-TH",
+    "sku": "",
+    "type": "Thermostat",
+    "communication_protocol": "MQTT"
+  },
+  "registers": [
+    {
+      "name": "Battery",
+      "influx_name": "batt",
+      "address_type": "Register",
+      "address": "0000",
+      "min_value": 0,
+      "max_value": 100,
+      "units": "%",
+      "data_type": "Word",
+      "multiplier": 1,
+      "rw": "r",
+      "report_interval": 21600
+    },
+    {
+      "name": "Temperature",
+      "influx_name": "temp",
+      "address_type": "Register",
+      "address": "0001",
+      "min_value": -20,
+      "max_value": 50,
+      "units": "°C/°F",
+      "data_type": "Word",
+      "multiplier": 1,
+      "rw": "r",
+      "report_interval": 3600
+    },
+    {
+      "name": "Humidity",
+      "influx_name": "humidity",
+      "address_type": "Register",
+      "address": "0002",
+      "min_value": 0,
+      "max_value": 100,
+      "units": "%",
+      "data_type": "Word",
+      "multiplier": 1,
+      "rw": "r",
+      "report_interval": 3600
+    },
+    {
+      "name": "DoorStatus",
+      "influx_name": "doorstatus",
+      "address_type": "Register",
+      "address": "0003",
+      "min_value": 0,
+      "max_value": 1,
+      "units": "%",
+      "data_type": "Word",
+      "multiplier": 1,
+      "rw": "r",
+      "report_interval": 3600
+    },
+    {
+      "name": "Signal Strength",
+      "influx_name": "rssi",
+      "address_type": "Register",
+      "address": "1000",
+      "min_value": -150,
+      "max_value": 0,
+      "units": "dbm",
+      "data_type": "Word",
+      "multiplier": 1,
+      "rw": "r",
+      "report_interval": 3600
+    },
+    {
+      "name": "Frequency",
+      "influx_name": "chan",
+      "address_type": "Register",
+      "address": "1001",
+      "min_value": 0,
+      "max_value": 100000,
+      "units": "hz",
+      "data_type": "Word",
+      "multiplier": 0.01,
+      "rw": "r",
+      "report_interval": 3600
+    },
+  ]
+}
