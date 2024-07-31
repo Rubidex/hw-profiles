@@ -9,28 +9,42 @@
     "type": "Temperature Sensor",
     "communication_protocol": "Direct",
     "packetType": "Base64",
-    "decodeItems": 2,
-    "decode": ["0175", "0367"]
+    "decodeItems": 12,
+    "decode": ["0175", "0300", "0367", "0377", "0400", "0467", "0468", "0600" "8367", "8377", "93d7", "94d7" ]
   },
   "0175": {
     "message_Name": "Message_Up",
     "decodedLen": 1,
     "payload": 
       {
-        "payload_1_Len": 1,
+        "payload_Len": 1,
         "payload1Name": "battery",
         "payloadType": "Integer",
         "payloadDesc": "Battery Level in %",
         "value0": "batteryT"
       }
   },
+  "0300": {
+    "message_Name": "Magnet_Ch1",
+    "decodedLen": 1,
+    "payload": 
+      {
+        "payload1": {
+          "payload_Len": 1,
+          "payload1Name": "Magnet_Ch1",
+          "payloadType": "Integer",
+          "payloadDesc": "MagnetState Channel1",
+          "value0": "magnet_ch1"
+        }
+      }
+    },
   "0367": {
     "message_Name": "Temperature_Ch1",
     "decodedLen": 2,
     "payload": 
       {
         "payload1": {
-          "payload_1_Len": 2,
+          "payload_Len": 2,
           "payload1Name": "Temperature_Ch1",
           "payloadType": "Integer",
           "payloadDesc": "Current Temperature Channel1",
@@ -38,31 +52,17 @@
         }
       }
     },
-    "0300": {
-    "message_Name": "Magnet_Status_Ch1",
-    "decodedLen": 1,
-    "payload": 
-      {
-        "payload1": {
-          "payload_1_Len": 1,
-          "payload1Name": "Mag_Stat_Ch1",
-          "payloadType": "Integer",
-          "payloadDesc": "Mag_Stat_Ch1",
-          "value0": "mag_stat_ch1"
-        }
-      }
-    },
-    "0467": {
-    "message_Name": "Temperature_ch2",
+    "0377": {
+    "message_Name": "waterlevel",
     "decodedLen": 2,
     "payload": 
       {
         "payload1": {
-          "payload_1_Len": 2,
-          "payload1Name": "Temperature_Ch2",
+          "payload_Len": 2,
+          "payload1Name": "Water level",
           "payloadType": "Integer",
-          "payloadDesc": "Current Temperature Channel2",
-          "value0": "temperature_ch2"
+          "payloadDesc": "water level",
+          "value0": "waterlevel"
         }
       }
     },
@@ -72,7 +72,7 @@
     "payload": 
       {
         "payload1": {
-          "payload_1_Len": 1,
+          "payload_Len": 1,
           "payload1Name": "Mag_Stat_Ch2",
           "payloadType": "Integer",
           "payloadDesc": "Mag_Stat_Ch2",
@@ -80,5 +80,145 @@
         }
       }
     },
+    "0467": {
+    "message_Name": "Temperature_ch2",
+    "decodedLen": 2,
+    "payload": 
+      {
+        "payload1": {
+          "payload_Len": 2,
+          "payload1Name": "Temperature_Ch2",
+          "payloadType": "Integer",
+          "payloadDesc": "Current Temperature Channel2",
+          "value0": "temperature_ch2"
+        }
+      }
+    },
+    "0468": {
+    "message_Name": "Humidity_ch1",
+    "decodedLen": 1,
+    "payload": 
+      {
+        "payload1": {
+          "payload_Len": 1,
+          "payload1Name": "Humidity_ch1",
+          "payloadType": "Integer",
+          "payloadDesc": "Current Humidity Channel2",
+          "value0": "humidity_ch1"
+        }
+      }
+    },
+    "0600": {
+    "message_Name": "Door Status",
+    "decodedLen": 1,
+    "payload": 
+      {
+        "payload1": {
+          "payload_Len": 1,
+          "payload1Name": "DoorStatus",
+          "payloadType": "Integer",
+          "payloadDesc": "Current Door Status",
+          "value0": "doordtatus"
+        }
+      }
+    },
+    "8367": {
+    "message_Name": "Temp Alarm Ch1",
+    "decodedLen": 3,
+    "payload": 
+      {
+        "payload1": {
+          "payload_Len": 2,
+          "payload1Name": "temperature_chn1",
+          "payloadType": "Integer",
+          "payloadDesc": "temperature_chn1",
+          "value0": "temperature_chn1"
+        },
+         "payload2": {
+          "payload_Len": 1,
+          "payload1Name": "temperature_chn1_alarm",
+          "payloadType": "Integer",
+          "payloadDesc": "temperature_chn1_alarm",
+          "value0": "temperature_chn1_alarm"
+        }
+      }
+    },
+    "8377": {
+    "message_Name": "Temp Alarm Ch2",
+    "decodedLen": 3,
+    "payload": 
+      {
+        "payload1": {
+          "payload_Len": 2,
+          "payload1Name": "temperature_chn2",
+          "payloadType": "Integer",
+          "payloadDesc": "temperature_chn2",
+          "value0": "temperature_chn2"
+        },
+         "payload2": {
+          "payload_Len": 1,
+          "payload1Name": "temperature_chn2_alarm",
+          "payloadType": "Integer",
+          "payloadDesc": "temperature_chn2_alarm",
+          "value0": "temperature_chn2_alarm"
+        }
+      }
+    },
+    "93d7": {
+    "message_Name": "Temperature_chn1 Alarm",
+    "decodedLen": 5,
+    "payload": 
+      {
+        "payload1": {
+          "payload_Len": 2,
+          "payload1Name": "Temperature_chn1",
+          "payloadType": "Integer",
+          "payloadDesc": "temperature_chn1",
+          "value0": "temperature_chn1"
+        },
+         "payload2": {
+          "payload_Len": 2,
+          "payload1Name": "temperature_chn1_change",
+          "payloadType": "Integer",
+          "payloadDesc": "temperature_chn1_change",
+          "value0": "temperature_chn1_change"
+        },
+        "payload3": {
+          "payload_Len": 1,
+          "payload1Name": "temperature_chn1_alarm",
+          "payloadType": "Integer",
+          "payloadDesc": "temperature_chn1_alarm",
+          "value0": "temperature_chn1_alarm"
+        }
+      }
+    },
+    "94d7": {
+    "message_Name": "Temperature_chn2 Alarm",
+    "decodedLen": 5,
+    "payload": 
+      {
+        "payload1": {
+          "payload_Len": 2,
+          "payload1Name": "Temperature_chn2",
+          "payloadType": "Integer",
+          "payloadDesc": "temperature_chn2",
+          "value0": "temperature_chn2"
+        },
+         "payload2": {
+          "payload_Len": 2,
+          "payload1Name": "temperature_chn2_change",
+          "payloadType": "Integer",
+          "payloadDesc": "temperature_chn12change",
+          "value0": "temperature_chn2_change"
+        },
+        "payload3": {
+          "payload_Len": 1,
+          "payload1Name": "temperature_chn2_alarm",
+          "payloadType": "Integer",
+          "payloadDesc": "temperature_chn2_alarm",
+          "value0": "temperature_chn2_alarm"
+        }
+      }
+    }
   }
 }

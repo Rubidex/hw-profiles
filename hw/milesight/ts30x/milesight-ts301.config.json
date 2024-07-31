@@ -6,7 +6,7 @@
     "model": "TS301-915",
     "sku": "",
     "type": "Thermostat",
-    "communication_protocol": "Direct"
+    "communication_protocol": "MQTT"
   },
   "registers": [
     {
@@ -37,7 +37,7 @@
     },
     {
       "name": "Magnet_ch1",
-      "influx_name": "mag_ch1",
+      "influx_name": "magnet_ch1",
       "address_type": "Register",
       "address": "0002",
       "min_value": 0,
@@ -63,7 +63,7 @@
     },
     {
       "name": "Magnet_ch2",
-      "influx_name": "mag_ch1",
+      "influx_name": "magnetch1",
       "address_type": "Register",
       "address": "0004",
       "min_value": 0,
