@@ -10,32 +10,30 @@
     "communication_protocol": "Direct",
     "packetType": "Base64",
     "decodeItems": 2,
-    "decode": ["0175", "0377" ]
+    "decode": ["0175", "0377"]
   },
   "0175": {
     "message_Name": "Message_Up",
     "decodedLen": 1,
-    "payload": 
-      {
-        "payload_Len": 1,
-        "payload1Name": "battery",
-        "payloadType": "Integer",
-        "payloadDesc": "Battery Level in %",
-        "value0": "batteryT"
-      }
+    "payload": {
+      "payload_Len": 1,
+      "payload1Name": "battery",
+      "payloadType": "Integer",
+      "payloadDesc": "Battery Level in %",
+      "value0": "batteryT"
+    }
   },
-    "0377": {
+  "0377": {
     "message_Name": "waterlevel",
     "decodedLen": 2,
-    "payload": 
-      {
-        "payload1": {
-          "payload_Len": 2,
-          "payload1Name": "Water level",
-          "payloadType": "Integer",
-          "payloadDesc": "water level",
-          "value0": "waterlevel"
-        }
+    "payload": {
+      "payload1": {
+        "payload_Len": 2,
+        "payload1Name": "Water level",
+        "payloadType": "Integer",
+        "payloadDesc": "water level",
+        "value0": "waterlevel"
       }
     }
+  }
 }

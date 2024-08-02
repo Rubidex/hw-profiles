@@ -3,7 +3,7 @@
     "device": "Sensor",
     "manufacturer": "Milesight",
     "make": "EM300 Series",
-    "model": "EM300-TH",
+    "model": "EM300-MCS",
     "sku": "",
     "type": "Thermostat",
     "communication_protocol": "MQTT"
@@ -86,6 +86,6 @@
       "multiplier": 0.01,
       "rw": "r",
       "report_interval": 3600
-    },
+    }
   ]
 }

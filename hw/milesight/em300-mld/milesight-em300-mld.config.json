@@ -60,6 +60,6 @@
       "multiplier": 0.01,
       "rw": "r",
       "report_interval": 3600
-    },
+    }
   ]
 }
