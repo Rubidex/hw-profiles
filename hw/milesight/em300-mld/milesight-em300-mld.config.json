@@ -11,7 +11,7 @@
   "registers": [
     {
       "name": "Battery",
-      "influx_name": "batt",
+      "influx_name": "battery",
       "address_type": "Register",
       "address": "0000",
       "min_value": 0,
@@ -24,7 +24,7 @@
     },
     {
       "name": "LeakStatus",
-      "influx_name": "leakStatus",
+      "influx_name": "asset_state",
       "address_type": "Register",
       "address": "0001",
       "min_value": 0,

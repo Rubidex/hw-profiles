@@ -24,7 +24,7 @@
     },
     {
       "name": "Water Level",
-      "influx_name": "waterlevel",
+      "influx_name": "tanklvl",
       "address_type": "Register",
       "address": "0001",
       "min_value": 0,

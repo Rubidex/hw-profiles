@@ -6,7 +6,7 @@
     "model": "EM300-TH",
     "sku": "",
     "type": "Thermostat",
-    "communication_protocol": "Direct"
+    "communication_protocol": "MQTT"
   },
   "registers": [
     {
@@ -37,7 +37,7 @@
     },
     {
       "name": "Battery",
-      "influx_name": "batt",
+      "influx_name": "battery",
       "address_type": "Register",
       "address": "0002",
       "min_value": 0,

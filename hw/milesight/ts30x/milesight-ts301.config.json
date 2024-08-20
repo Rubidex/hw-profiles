@@ -24,7 +24,7 @@
     },
     {
       "name": "Temperature_ch1",
-      "influx_name": "temp_ch1",
+      "influx_name": "temp",
       "address_type": "Register",
       "address": "0001",
       "min_value": 0,
@@ -32,6 +32,19 @@
       "units": "°Ç",
       "data_type": "Word",
       "multiplier": 0.1,
+      "rw": "r",
+      "report_interval": 3600
+    },
+    {
+      "name": "WaterLvl_ch1",
+      "influx_name": "tanklvl",
+      "address_type": "Register",
+      "address": "0002",
+      "min_value": 0,
+      "max_value": 1,
+      "units": "#",
+      "data_type": "Word",
+      "multiplier": 1,
       "rw": "r",
       "report_interval": 3600
     },
@@ -63,7 +76,7 @@
     },
     {
       "name": "Magnet_ch2",
-      "influx_name": "magnetch1",
+      "influx_name": "magnet_ch2",
       "address_type": "Register",
       "address": "0004",
       "min_value": 0,
