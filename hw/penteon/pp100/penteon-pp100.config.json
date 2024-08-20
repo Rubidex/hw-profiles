@@ -18,7 +18,7 @@
       "max_value": 25,
       "units": "A",
       "data_type": "Word",
-      "multiplier": 0.1,
+      "multiplier": 0.001,
       "rw": "r"
     },
     {
@@ -30,7 +30,7 @@
       "max_value": 25,
       "units": "A",
       "data_type": "Word",
-      "multiplier": 0.1,
+      "multiplier": 0.001,
       "rw": "r"
     },
     {
@@ -42,7 +42,7 @@
       "max_value": 25,
       "units": "A",
       "data_type": "Word",
-      "multiplier": 0.1,
+      "multiplier": 0.001,
       "rw": "r"
     },
     {
@@ -54,7 +54,7 @@
       "max_value": 25,
       "units": "A",
       "data_type": "Word",
-      "multiplier": 0.1,
+      "multiplier": 0.001,
       "rw": "r"
     },
     {
@@ -66,7 +66,7 @@
       "max_value": 25,
       "units": "A",
       "data_type": "Word",
-      "multiplier": 0.1,
+      "multiplier": 0.001,
       "rw": "r"
     },
     {
@@ -78,7 +78,7 @@
       "max_value": 25,
       "units": "A",
       "data_type": "Word",
-      "multiplier": 0.1,
+      "multiplier": 0.001,
       "rw": "r"
     },
     {
@@ -90,7 +90,7 @@
       "max_value": 25,
       "units": "A",
       "data_type": "Word",
-      "multiplier": 0.1,
+      "multiplier": 0.001,
       "rw": "r"
     },
     {
@@ -102,7 +102,7 @@
       "max_value": 25,
       "units": "A",
       "data_type": "Word",
-      "multiplier": 0.1,
+      "multiplier": 0.001,
       "rw": "r"
     },
     {
@@ -114,7 +114,7 @@
       "max_value": 25,
       "units": "A",
       "data_type": "Word",
-      "multiplier": 0.1,
+      "multiplier": 0.001,
       "rw": "r"
     },
     {
@@ -126,7 +126,7 @@
       "max_value": 25,
       "units": "A",
       "data_type": "Word",
-      "multiplier": 0.1,
+      "multiplier": 0.001,
       "rw": "r"
     },
     {
@@ -138,7 +138,7 @@
       "max_value": 25,
       "units": "A",
       "data_type": "Word",
-      "multiplier": 0.1,
+      "multiplier": 0.001,
       "rw": "r"
     },
     {
@@ -150,7 +150,7 @@
       "max_value": 25,
       "units": "A",
       "data_type": "Word",
-      "multiplier": 0.1,
+      "multiplier": 0.001,
       "rw": "r"
     },
     {
@@ -162,7 +162,7 @@
       "max_value": 25,
       "units": "A",
       "data_type": "Word",
-      "multiplier": 0.1,
+      "multiplier": 0.001,
       "rw": "r"
     },
     {
@@ -174,7 +174,7 @@
       "max_value": 25,
       "units": "A",
       "data_type": "Word",
-      "multiplier": 0.1,
+      "multiplier": 0.001,
       "rw": "r"
     },
     {
@@ -186,7 +186,7 @@
       "max_value": 25,
       "units": "A",
       "data_type": "Word",
-      "multiplier": 0.1,
+      "multiplier": 0.001,
       "rw": "r"
     },
     {
@@ -198,7 +198,7 @@
       "max_value": 25,
       "units": "A",
       "data_type": "Word",
-      "multiplier": 0.1,
+      "multiplier": 0.001,
       "rw": "r"
     },
     {
@@ -210,7 +210,7 @@
       "max_value": 25,
       "units": "A",
       "data_type": "Word",
-      "multiplier": 0.1,
+      "multiplier": 0.001,
       "rw": "r"
     },
     {
@@ -222,7 +222,7 @@
       "max_value": 25,
       "units": "A",
       "data_type": "Word",
-      "multiplier": 0.1,
+      "multiplier": 0.001,
       "rw": "r"
     },
     {
