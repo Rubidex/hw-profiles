@@ -44,7 +44,7 @@ THUS a DECODE for uplinks would look (Something) like the following
       "payload" : [
       {
         "payload_1_Len": 1,
-          "payload1Name": "status1",
+          "payloadName": "status1",
           "payloadType": "bitmap",
           "payloadDesc": "Register of gas meter status #1",
           "value0" : "FLG_LOW_BAT",
@@ -58,7 +58,7 @@ THUS a DECODE for uplinks would look (Something) like the following
         },
         {
           "payload_2_Len": 1,
-          "payload1Name": "status2",
+          "payloadName": "status2",
           "payloadType": "bitmap",
           "payloadDesc": "Register of gas meter status #2",
           "value0" : "FLG_ERR_REVERSE",
@@ -72,7 +72,7 @@ THUS a DECODE for uplinks would look (Something) like the following
         },
         {
           "payload_3_Len": 1,
-          "payload1Name": "Model",
+          "payloadName": "Model",
           "payloadType": "bitmap",
           "payloadDesc": "Gas meter model",
           "value0" : "METER_CLASS",
@@ -86,14 +86,14 @@ THUS a DECODE for uplinks would look (Something) like the following
         },
         {
           "payload_4_Len": 3,
-          "payload1Name": "Serial",
+          "payloadName": "Serial",
           "payloadType": "integer",
           "payloadDesc": "Serial number of gas meter. Unsigned integer",
           "value0" : "Serial"
         },
         {
           "payload_5_Len": 4,
-          "payload1Name": "Volume",
+          "payloadName": "Volume",
           "payloadType": "integer",
           "payloadDesc": "Total volume, unit of measure: liter or ft3. Unsigned integer",
           "value0" : "volume"
@@ -109,7 +109,7 @@ THUS a DECODE for uplinks would look (Something) like the following
           "payload1" :
             {
               "payload_1_Len": 4,
-              "payload1Name": "CurrentTime",
+              "payloadName": "CurrentTime",
               "payloadType": "Integer",
               "payloadDesc": "Current DeviceTime",
               "value0" : "currentDeviceTime"
@@ -119,7 +119,7 @@ THUS a DECODE for uplinks would look (Something) like the following
           "payload2" :
             {
               "payload_1_Len": 2,
-              "payload1Name": "Debug",
+              "payloadName": "Debug",
               "payloadType": "Integer",
               "payloadDesc": "Debugging information for developers",
               "value0" : "Debug"

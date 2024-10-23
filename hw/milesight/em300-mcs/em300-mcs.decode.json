@@ -21,11 +21,13 @@
     "message_Name": "Message_Up",
     "decodedLen": 1,
     "payload": {
-      "payload_Len": 1,
-      "payload1Name": "battery",
-      "payloadType": "Integer",
-      "payloadDesc": "Battery Level in %",
-      "value0": "batteryT"
+      "payload1": {
+        "payload_Len": 1,
+        "payloadName": "battery",
+        "payloadType": "Integer",
+        "payloadDesc": "Battery Level in %",
+        "value0": "batteryT"
+      }
     }
   },
   "0367": {
@@ -34,7 +36,7 @@
     "payload": {
       "payload1": {
         "payload_Len": 2,
-        "payload1Name": "Temperature",
+        "payloadName": "Temperature",
         "payloadType": "Integer",
         "payloadDesc": "Current Temperature",
         "value0": "temp"
@@ -47,7 +49,7 @@
     "payload": {
       "payload1": {
         "payload_Len": 1,
-        "payload1Name": "Humidity",
+        "payloadName": "Humidity",
         "payloadType": "Integer",
         "payloadDesc": "Current Humidity",
         "value0": "humidity"
@@ -60,7 +62,7 @@
     "payload": {
       "payload1": {
         "payload_Len": 1,
-        "payload1Name": "DoorStatus",
+        "payloadName": "DoorStatus",
         "payloadType": "Integer",
         "payloadDesc": "Door Status+Temp",
         "value0": "doorStatus"
