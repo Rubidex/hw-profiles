@@ -16,11 +16,13 @@
     "message_Name": "Message_Up",
     "decodedLen": 1,
     "payload": {
-      "payload_Len": 1,
-      "payload1Name": "battery",
-      "payloadType": "Integer",
-      "payloadDesc": "Battery Level in %",
-      "value0": "batteryT"
+      "payload1": {
+        "payload_Len": 1,
+        "payloadName": "battery",
+        "payloadType": "Integer",
+        "payloadDesc": "Battery Level in %",
+        "value0": "batteryT"
+      }
     }
   },
   "0600": {
@@ -29,7 +31,7 @@
     "payload": {
       "payload1": {
         "payload_Len": 1,
-        "payload1Name": "leakStatus",
+        "payloadName": "leakStatus",
         "payloadType": "Integer",
         "payloadDesc": "Leak Status",
         "value0": "leakStatus"

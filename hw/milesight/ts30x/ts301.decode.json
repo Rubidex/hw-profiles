@@ -16,11 +16,13 @@
     "message_Name": "Message_Up",
     "decodedLen": 1,
     "payload": {
-      "payload_Len": 1,
-      "payload1Name": "battery",
-      "payloadType": "Integer",
-      "payloadDesc": "Battery Level in %",
-      "value0": "batteryT"
+      "payload1": {
+        "payload_Len": 1,
+        "payloadName": "battery",
+        "payloadType": "Integer",
+        "payloadDesc": "Battery Level in %",
+        "value0": "batteryT"
+      }
     }
   },
   "0300": {
@@ -29,7 +31,7 @@
     "payload": {
       "payload1": {
         "payload_Len": 1,
-        "payload1Name": "Magnet_Ch1",
+        "payloadName": "Magnet_Ch1",
         "payloadType": "Integer",
         "payloadDesc": "MagnetState Channel1",
         "value0": "magnet_ch1"
@@ -42,7 +44,7 @@
     "payload": {
       "payload1": {
         "payload_Len": 2,
-        "payload1Name": "Temperature_Ch1",
+        "payloadName": "Temperature_Ch1",
         "payloadType": "Integer",
         "payloadDesc": "Current Temperature Channel1",
         "value0": "temperature_ch1"
@@ -55,7 +57,7 @@
     "payload": {
       "payload1": {
         "payload_Len": 2,
-        "payload1Name": "Water level",
+        "payloadName": "Water level",
         "payloadType": "Integer",
         "payloadDesc": "water level",
         "value0": "waterlevel"
@@ -68,7 +70,7 @@
     "payload": {
       "payload1": {
         "payload_Len": 1,
-        "payload1Name": "Mag_Stat_Ch2",
+        "payloadName": "Mag_Stat_Ch2",
         "payloadType": "Integer",
         "payloadDesc": "Mag_Stat_Ch2",
         "value0": "mag_stat_ch2"
@@ -81,7 +83,7 @@
     "payload": {
       "payload1": {
         "payload_Len": 2,
-        "payload1Name": "Temperature_Ch2",
+        "payloadName": "Temperature_Ch2",
         "payloadType": "Integer",
         "payloadDesc": "Current Temperature Channel2",
         "value0": "temperature_ch2"
@@ -94,7 +96,7 @@
     "payload": {
       "payload1": {
         "payload_Len": 1,
-        "payload1Name": "Humidity_ch1",
+        "payloadName": "Humidity_ch1",
         "payloadType": "Integer",
         "payloadDesc": "Current Humidity Channel2",
         "value0": "humidity_ch1"
@@ -107,7 +109,7 @@
     "payload": {
       "payload1": {
         "payload_Len": 1,
-        "payload1Name": "DoorStatus",
+        "payloadName": "DoorStatus",
         "payloadType": "Integer",
         "payloadDesc": "Current Door Status",
         "value0": "doordtatus"
@@ -120,14 +122,14 @@
     "payload": {
       "payload1": {
         "payload_Len": 2,
-        "payload1Name": "temperature_chn1",
+        "payloadName": "temperature_chn1",
         "payloadType": "Integer",
         "payloadDesc": "temperature_chn1",
         "value0": "temperature_chn1"
       },
       "payload2": {
         "payload_Len": 1,
-        "payload1Name": "temperature_chn1_alarm",
+        "payloadName": "temperature_chn1_alarm",
         "payloadType": "Integer",
         "payloadDesc": "temperature_chn1_alarm",
         "value0": "temperature_chn1_alarm"
@@ -140,14 +142,14 @@
     "payload": {
       "payload1": {
         "payload_Len": 2,
-        "payload1Name": "temperature_chn2",
+        "payloadName": "temperature_chn2",
         "payloadType": "Integer",
         "payloadDesc": "temperature_chn2",
         "value0": "temperature_chn2"
       },
       "payload2": {
         "payload_Len": 1,
-        "payload1Name": "temperature_chn2_alarm",
+        "payloadName": "temperature_chn2_alarm",
         "payloadType": "Integer",
         "payloadDesc": "temperature_chn2_alarm",
         "value0": "temperature_chn2_alarm"
@@ -160,21 +162,21 @@
     "payload": {
       "payload1": {
         "payload_Len": 2,
-        "payload1Name": "Temperature_chn1",
+        "payloadName": "Temperature_chn1",
         "payloadType": "Integer",
         "payloadDesc": "temperature_chn1",
         "value0": "temperature_chn1"
       },
       "payload2": {
         "payload_Len": 2,
-        "payload1Name": "temperature_chn1_change",
+        "payloadName": "temperature_chn1_change",
         "payloadType": "Integer",
         "payloadDesc": "temperature_chn1_change",
         "value0": "temperature_chn1_change"
       },
       "payload3": {
         "payload_Len": 1,
-        "payload1Name": "temperature_chn1_alarm",
+        "payloadName": "temperature_chn1_alarm",
         "payloadType": "Integer",
         "payloadDesc": "temperature_chn1_alarm",
         "value0": "temperature_chn1_alarm"
@@ -187,21 +189,21 @@
     "payload": {
       "payload1": {
         "payload_Len": 2,
-        "payload1Name": "Temperature_chn2",
+        "payloadName": "Temperature_chn2",
         "payloadType": "Integer",
         "payloadDesc": "temperature_chn2",
         "value0": "temperature_chn2"
       },
       "payload2": {
         "payload_Len": 2,
-        "payload1Name": "temperature_chn2_change",
+        "payloadName": "temperature_chn2_change",
         "payloadType": "Integer",
         "payloadDesc": "temperature_chn12change",
         "value0": "temperature_chn2_change"
       },
       "payload3": {
         "payload_Len": 1,
-        "payload1Name": "temperature_chn2_alarm",
+        "payloadName": "temperature_chn2_alarm",
         "payloadType": "Integer",
         "payloadDesc": "temperature_chn2_alarm",
         "value0": "temperature_chn2_alarm"
