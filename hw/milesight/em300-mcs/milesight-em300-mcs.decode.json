@@ -11,6 +11,11 @@
     "packetType": "Base64",
     "decodeItems": 4,
     "decode": ["0175", "0367", "0468"]
+    "mqttMeta": {
+    "ApplicationID": "string",
+    "ApplicationName": "string", 
+    DeviceName, DevEUI, rxInfo, txInfo, adr, fCnt, fPort, data
+    }
   },
   "0175": {
     "message_Name": "Message_Up",

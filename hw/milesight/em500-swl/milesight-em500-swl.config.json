@@ -29,7 +29,7 @@
       "address": "0377",
       "min_value": 0,
       "max_value": 1,
-      "units": "°Ç",
+      "units": "MM",
       "data_type": "Word",
       "multiplier": 1,
       "rw": "r",
