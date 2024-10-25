@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "device": "Sensor",
+    "manufacturer": "Shengda",
+    "make": "HAC-MLW Series",
+    "model": "HAC-MLW",
+    "sku": "HAC-MLW",
+    "type": "Water Flow Meter",
+    "communication_protocol": "MQTT"
+  },
+  "registers": [
+    {
+      "name": "Pulse Count",
+      "influx_name": "pCnt",
+      "address_type": "Register",
+      "address": "0b",
+      "min_value": 0,
+      "max_value": "FFFFFFFF",
+      "units": "#",
+      "data_type": "Word",
+      "multiplier": 1,
+      "rw": "rw",
+      "report_interval": 86400
+    },
+    {
+      "name": "Meter Mode",
+      "influx_name": "Mode",
+      "address_type": "Register",
+      "address": "12",
+      "min_value": 0,
+      "max_value": "FF",
+      "units": "#",
+      "data_type": "Word",
+      "multiplier": 1,
+      "rw": "rw",
+      "report_interval": 86400
+    },
+    {
+      "name": "Pulse Constant",
+      "influx_name": "Constant",
+      "address_type": "Register",
+      "address": "14",
+      "min_value": 0,
+      "max_value": "FF",
+      "units": "#",
+      "data_type": "Word",
+      "multiplier": 1,
+      "rw": "rw",
+      "report_interval": 86400
+    },
+    {
+      "name": "MeterID",
+      "influx_name": "MeterID",
+      "address_type": "Register",
+      "address": "16",
+      "min_value": 0,
+      "max_value": "FFFFFFFF",
+      "units": "#",
+      "data_type": "Word",
+      "multiplier": 1,
+      "rw": "rw",
+      "report_interval": 86400
+    },
+    {
+      "name": "PacketSequence",
+      "influx_name": "fCnt",
+      "address_type": "Register",
+      "address": "19",
+      "min_value": 0,
+      "max_value": "FF",
+      "units": "#",
+      "data_type": "Word",
+      "multiplier": 1,
+      "rw": "r",
+      "report_interval": 86400
+    },
+    {
+      "name": "Battery Voltage",
+      "influx_name": "Battery",
+      "address_type": "Register",
+      "address": "1a",
+      "min_value": 0,
+      "max_value": "FFFF",
+      "units": "#",
+      "data_type": "Word",
+      "multiplier": 1,
+      "rw": "r",
+      "report_interval": 86400
+    },
+    {
+      "name": "Meter Type",
+      "influx_name": "Type",
+      "address_type": "Register",
+      "address": "1b",
+      "min_value": 0,
+      "max_value": "FF",
+      "units": "#",
+      "data_type": "Word",
+      "multiplier": 1,
+      "rw": "r",
+      "report_interval": 86400
+    },
+    {
+      "name": "Trigger Source",
+      "influx_name": "Trigger",
+      "address_type": "Register",
+      "address": "23",
+      "min_value": 0,
+      "max_value": "FF",
+      "units": "#",
+      "data_type": "Word",
+      "multiplier": 1,
+      "rW": "r",
+      "report_interval": 86400
+    },
+    {
+      "name": "Device Status",
+      "influx_name": "Status",
+      "address_type": "Register",
+      "address": "33",
+      "min_value": 0,
+      "max_value": "FFFF",
+      "units": "#",
+      "data_type": "Word",
+      "multiplier": 1,
+      "rw": "r",
+      "report_interval": 86400
+    }
+  ]
+}
