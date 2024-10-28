@@ -6,7 +6,7 @@
     "model": "GG-1.6, G-2.5, G-4.0, G-6.0",
     "sku": "GMU3.1",
     "type": "Gas Meter",
-    "communication_protocol": "Direct"
+    "communicationProtocol": "Direct"
   },
   "processing": [
     {"name": "MQTT",

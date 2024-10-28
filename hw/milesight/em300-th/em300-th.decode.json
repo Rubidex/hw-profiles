@@ -7,17 +7,17 @@
     "model": "TS-30x",
     "sku": "TS-301",
     "type": "Temperature Sensor",
-    "communication_protocol": "Direct",
+    "communicationProtocol": "Direct",
     "packetType": "Base64",
     "decodeItems": 3,
     "decode": ["0175", "0367", "0468"]
   },
   "0175": {
-    "message_Name": "Message_Up",
+    "messageName": "Message_Up",
     "decodedLen": 1,
     "payload": {
       "payload1": {
-        "payload_Len": 1,
+        "payloadLen": 1,
         "payloadName": "battery",
         "payloadType": "Integer",
         "payloadDesc": "Battery Level in %",
@@ -26,11 +26,11 @@
     }
   },
   "0367": {
-    "message_Name": "Temperature",
+    "messageName": "Temperature",
     "decodedLen": 2,
     "payload": {
       "payload1": {
-        "payload_Len": 2,
+        "payloadLen": 2,
         "payloadName": "Temperature",
         "payloadType": "Integer",
         "payloadDesc": "Current Temperature",
@@ -39,11 +39,11 @@
     }
   },
   "0468": {
-    "message_Name": "Humidity",
+    "messageName": "Humidity",
     "decodedLen": 1,
     "payload": {
       "payload1": {
-        "payload_Len": 1,
+        "payloadLen": 1,
         "payloadName": "Humidity",
         "payloadType": "Integer",
         "payloadDesc": "Current Humidity",

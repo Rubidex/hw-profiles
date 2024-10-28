@@ -6,34 +6,34 @@
     "model": "EM500-SWL-915",
     "sku": "EM500-SWL-915",
     "type": "Water Level Sensor",
-    "communication_protocol": "MQTT"
+    "communicationProtocol": "MQTT"
   },
   "registers": [
     {
       "name": "battery",
-      "influx_name": "battery",
-      "address_type": "Register",
+      "influxName": "battery",
+      "addressType": "Register",
       "address": "0175",
-      "min_value": 0,
-      "max_value": 100,
+      "minValue": 0,
+      "maxValue": 100,
       "units": "%",
-      "data_type": "Word",
+      "dataType": "Word",
       "multiplier": 1,
       "rw": "r",
-      "report_interval": 3600
+      "reportInterval": 3600
     },
     {
       "name": "Water Level",
-      "influx_name": "tanklvl",
-      "address_type": "Register",
+      "influxName": "tanklvl",
+      "addressType": "Register",
       "address": "0377",
-      "min_value": 0,
-      "max_value": 1,
+      "minValue": 0,
+      "maxValue": 1,
       "units": "MM",
-      "data_type": "Word",
+      "dataType": "Word",
       "multiplier": 1,
       "rw": "r",
-      "report_interval": 3600
+      "reportInterval": 3600
     }
   ]
 }

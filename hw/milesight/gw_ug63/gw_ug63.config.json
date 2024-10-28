@@ -6,7 +6,7 @@
     "model": "UG63",
     "sku": "",
     "type": "Gateway",
-    "communication_protocol": "MQTT"
+    "communicationProtocol": "MQTT"
   },
   "MQTT": [
     {
@@ -20,8 +20,8 @@
       "txPacketsReceived": "text",
       "txPacketsEmitted": "text",
       "rw": "r",
-      "report_interval": 300,
-      "image_coordinates": [0, 0,0 ,0 ]
+      "reportInterval": 300,
+      "image_coordinates": [0, 0, 0, 0]
     }
   ]
 }

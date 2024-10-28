@@ -31,7 +31,7 @@ THUS a DECODE for uplinks would look (Something) like the following
     "model": "GG-1.6, G-2.5, G-4.0, G-6.0",
     "sku": "GMU3.1",
     "type": "Gas Meter",
-    "communication_protocol": "Direct",
+    "communicationProtocol": "Direct",
     "packetType": "Base64",
     "decode": [
       "0x04", "0x41"
@@ -39,7 +39,7 @@ THUS a DECODE for uplinks would look (Something) like the following
   },
 
   "0x04": {
-      "message_Name": "MSG_UP_GAS_METER",
+      "messageName": "MSG_UP_GAS_METER",
       "decodedLen" : 10,
       "payload" : [
       {
@@ -102,7 +102,7 @@ THUS a DECODE for uplinks would look (Something) like the following
     },
 
     "0x41": {
-      "message_Name": "MSG_UP_TIME",
+      "messageName": "MSG_UP_TIME",
       "decodedLen" : 6,
       "payload" : [
         {

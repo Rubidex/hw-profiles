@@ -7,7 +7,7 @@
     "model": "HAC-MLW",
     "sku": "HAC-MLW",
     "type": "Water Flow Meter",
-    "communication_protocol": "MQTT",
+    "communicationProtocol": "MQTT",
     "packetType": "Base64",
     "decodeItems": 9,
     "decode": ["24"]
@@ -18,12 +18,12 @@
     }
   },
   "0b": {
-    "message_Name": "PulseCnt",
+    "messageName": "PulseCnt",
     "MessageType": "Hexidecimal",
     "decodedLen": 4,
     "payload": {
       "payload1": {
-        "payload_Len": 4,
+        "payloadLen": 4,
         "payloadName": "PulseCnt",
         "payloadType": "Integer",
         "payloadDesc": "Number of pulse",
@@ -32,12 +32,12 @@
     }
   },
   "12": {
-    "message_Name": "Mode",
+    "messageName": "Mode",
     "MessageType": "Hexidecimal",
     "decodedLen": 1,
     "payload": {
       "payload1": {
-        "payload_Len": 1,
+        "payloadLen": 1,
         "payloadName": "Mode",
         "payloadType": "Integer",
         "payloadDesc": "Metering Mode",
@@ -46,12 +46,12 @@
     }
   },
   "14": {
-    "message_Name": "Pulse Constant",
+    "messageName": "Pulse Constant",
     "MessageType": "Hexidecimal",
     "decodedLen": 1,
     "payload": {
       "payload1": {
-        "payload_Len": 1,
+        "payloadLen": 1,
         "payloadName": "Constant",
         "payloadType": "Integer",
         "payloadDesc": "Pulse Constant",
@@ -60,12 +60,12 @@
     }
   },
   "16": {
-    "message_Name": "MeterID",
+    "messageName": "MeterID",
     "MessageType": "Hexidecimal",
     "decodedLen": 4,
     "payload": {
       "payload1": {
-        "payload_Len": 4,
+        "payloadLen": 4,
         "payloadName": "MeterID",
         "payloadType": "Integer",
         "payloadDesc": "MeterID",
@@ -73,12 +73,12 @@
       }
     },
     "1a": {
-    "message_Name": "Battery Level",
+    "messageName": "Battery Level",
     "MessageType": "Hexidecimal",
     "decodedLen": 2,
     "payload": {
       "payload1": {
-        "payload_Len": 2,
+        "payloadLen": 2,
         "payloadName": "Battery",
         "payloadType": "Integer",
         "payloadDesc": "Battery Level",
@@ -87,12 +87,12 @@
     }
   },
   "1b": {
-    "message_Name": "Meter Type",
+    "messageName": "Meter Type",
     "MessageType": "Hexidecimal",
     "decodedLen": 1,
     "payload": {
       "payload1": {
-        "payload_Len": 1,
+        "payloadLen": 1,
         "payloadName": "Type",
         "payloadType": "Integer",
         "payloadDesc": "Meter payloadType",
@@ -101,12 +101,12 @@
     }
   },
   "23": {
-    "message_Name": "Trigger Source",
+    "messageName": "Trigger Source",
     "MessageType": "Hexidecimal",
     "decodedLen": 1,
     "payload": {
       "payload1": {
-        "payload_Len": 1,
+        "payloadLen": 1,
         "payloadName": "Trigger",
         "payloadType": "Integer",
         "payloadDesc": "Trigger Source",
@@ -115,117 +115,117 @@
     }
   },
   "33": {
-    "message_Name": "Device Status",
+    "messageName": "Device Status",
     "MessageType": "Binary",
     "decodedLen": 1,
     "payload": {
        "payload0": {
-        "payload_Len": 1,
+        "payloadLen": 1,
         "payloadName": "Reserve",
         "payloadType": "Binary",
         "payloadDesc": "  ",
         "value0": "  "
       },
       "payload1": {
-        "payload_Len": 1,
+        "payloadLen": 1,
         "payloadName": "Meter Failure",
         "payloadType": "Binary",
         "payloadDesc": "  ",
         "value0": "  "
       },
       "payload2": {
-        "payload_Len": 1,
+        "payloadLen": 1,
         "payloadName": "Valve Status",
         "payloadType": "Binary",
         "payloadDesc": "  ",
         "value0": "  "
       },
        "payload3": {
-        "payload_Len": 1,
+        "payloadLen": 1,
         "payloadName": "DER",
         "payloadType": "Binary",
         "payloadDesc": "  ",
         "value0": "  "
       },
        "payload4": {
-        "payload_Len": 1,
+        "payloadLen": 1,
         "payloadName": "Battery Power Off",
         "payloadType": "Binary",
         "payloadDesc": "  ",
         "value0": "  "
       },
        "payload5": {
-        "payload_Len": 1,
+        "payloadLen": 1,
         "payloadName": "Magnetic Attack",
         "payloadType": "Binary",
         "payloadDesc": "  ",
         "value0": "  "
       },
        "payload6": {
-        "payload_Len": 1,
+        "payloadLen": 1,
         "payloadName": "Battery Status",
         "payloadType": "Binary",
         "payloadDesc": "  ",
         "value0": "  "
       },
        "payload7": {
-        "payload_Len": 1,
+        "payloadLen": 1,
         "payloadName": "Valve Fault",
         "payloadType": "Binary",
         "payloadDesc": "  ",
         "value0": "  "
       },
        "payload8": {
-        "payload_Len": 1,
+        "payloadLen": 1,
         "payloadName": "Remote Flag",
         "payloadType": "Binary",
         "payloadDesc": "  ",
         "value0": "  "
       },
       "payload9": {
-        "payload_Len": 1,
+        "payloadLen": 1,
         "payloadName": "Historical magnetic attack",
         "payloadType": "Binary",
         "payloadDesc": "  ",
         "value0": "  "
       },
       "payload10": {
-        "payload_Len": 1,
+        "payloadLen": 1,
         "payloadName": "Tube Burst",
         "payloadType": "Binary",
         "payloadDesc": "  ",
         "value0": "  "
       },
        "payload11": {
-        "payload_Len": 1,
+        "payloadLen": 1,
         "payloadName": "Leakage",
         "payloadType": "Binary",
         "payloadDesc": "  ",
         "value0": "  "
       },
        "payload12": {
-        "payload_Len": 1,
+        "payloadLen": 1,
         "payloadName": "Meter Status",
         "payloadType": "Binary",
         "payloadDesc": "  ",
         "value0": "  "
       },
        "payload13": {
-        "payload_Len": 1,
+        "payloadLen": 1,
         "payloadName": "Flow Alarm",
         "payloadType": "Binary",
         "payloadDesc": "  ",
         "value0": "  "
       },
        "payload14": {
-        "payload_Len": 1,
+        "payloadLen": 1,
         "payloadName": "Water Return Alarm",
         "payloadType": "Binary",
         "payloadDesc": "  ",
         "value0": "  "
       },
        "payload15": {
-        "payload_Len": 1,
+        "payloadLen": 1,
         "payloadName": "Water Inlet Alarm",
         "payloadType": "Binary",
         "payloadDesc": "  ",

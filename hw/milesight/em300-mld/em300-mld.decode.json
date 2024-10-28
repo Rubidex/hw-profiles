@@ -7,17 +7,17 @@
     "model": "EM300-MLD",
     "sku": "EM300-MLD",
     "type": "Floor Leak Sensor",
-    "communication_protocol": "MQTT",
+    "communicationProtocol": "MQTT",
     "packetType": "Base64",
     "decodeItems": 2,
     "decode": ["0175", "0600"]
   },
   "0175": {
-    "message_Name": "Message_Up",
+    "messageName": "Message_Up",
     "decodedLen": 1,
     "payload": {
       "payload1": {
-        "payload_Len": 1,
+        "payloadLen": 1,
         "payloadName": "battery",
         "payloadType": "Integer",
         "payloadDesc": "Battery Level in %",
@@ -26,11 +26,11 @@
     }
   },
   "0600": {
-    "message_Name": "LeakStatus",
+    "messageName": "LeakStatus",
     "decodedLen": 1,
     "payload": {
       "payload1": {
-        "payload_Len": 1,
+        "payloadLen": 1,
         "payloadName": "leakStatus",
         "payloadType": "Integer",
         "payloadDesc": "Leak Status",

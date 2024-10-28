@@ -6,73 +6,73 @@
     "model": "EM300-TH",
     "sku": "",
     "type": "Thermostat",
-    "communication_protocol": "MQTT"
+    "communicationProtocol": "MQTT"
   },
   "registers": [
     {
       "name": "Battery",
-      "influx_name": "battery",
-      "address_type": "Register",
+      "influxName": "battery",
+      "addressType": "Register",
       "address": "0175",
-      "min_value": 0,
-      "max_value": 100,
+      "minValue": 0,
+      "maxValue": 100,
       "units": "%",
-      "data_type": "Word",
+      "dataType": "Word",
       "multiplier": 1,
       "rw": "r",
-      "report_interval": 21600
+      "reportInterval": 21600
     },
     {
       "name": "Temperature",
-      "influx_name": "temp",
-      "address_type": "Register",
+      "influxName": "temp",
+      "addressType": "Register",
       "address": "0367",
-      "min_value": -20,
-      "max_value": 50,
+      "minValue": -20,
+      "maxValue": 50,
       "units": "°C/°F",
-      "data_type": "Word",
+      "dataType": "Word",
       "multiplier": 0.1,
       "rw": "r",
-      "report_interval": 3600
+      "reportInterval": 3600
     },
     {
       "name": "Humidity",
-      "influx_name": "humidity",
-      "address_type": "Register",
+      "influxName": "humidity",
+      "addressType": "Register",
       "address": "0468",
-      "min_value": 0,
-      "max_value": 100,
+      "minValue": 0,
+      "maxValue": 100,
       "units": "%",
-      "data_type": "Word",
+      "dataType": "Word",
       "multiplier": 1,
       "rw": "r",
-      "report_interval": 3600
+      "reportInterval": 3600
     },
     {
       "name": "Signal Strength",
-      "influx_name": "rssi",
-      "address_type": "Register",
+      "influxName": "rssi",
+      "addressType": "Register",
       "address": "1000",
-      "min_value": -150,
-      "max_value": 0,
+      "minValue": -150,
+      "maxValue": 0,
       "units": "dbm",
-      "data_type": "Word",
+      "dataType": "Word",
       "multiplier": 1,
       "rw": "r",
-      "report_interval": 3600
+      "reportInterval": 3600
     },
     {
       "name": "Frequency",
-      "influx_name": "chan",
-      "address_type": "Register",
+      "influxName": "chan",
+      "addressType": "Register",
       "address": "1001",
-      "min_value": 0,
-      "max_value": 100000,
+      "minValue": 0,
+      "maxValue": 100000,
       "units": "hz",
-      "data_type": "Word",
+      "dataType": "Word",
       "multiplier": 0.01,
       "rw": "r",
-      "report_interval": 3600
+      "reportInterval": 3600
     }
   ]
 }
