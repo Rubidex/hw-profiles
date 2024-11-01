@@ -10,6 +10,7 @@
     "communicationProtocol": "Direct",
     "packetType": "Base64",
     "decodeItems": 12,
+    "decodeType": "tagValue",
     "decode": ["0175", "0300", "0367", "0377", "0400", "0467", "0468", "0600", "8367", "8377", "93d7", "94d7"]
   },
   "0175": {
