@@ -50,9 +50,9 @@
     },
     {
       "name": "DoorStatus",
-      "influxName": "magnet_ch1",
+      "influxName": "magnetCh1",
       "addressType": "Register",
-      "address": "0300",
+      "address": "0600",
       "minValue": 0,
       "maxValue": 1,
       "units": "%",
