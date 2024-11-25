@@ -42,7 +42,7 @@
       "address": "0377",
       "minValue": 0,
       "maxValue": 1000,
-      "units": "#",
+      "units": "mm",
       "dataType": "Word",
       "multiplier": 1,
       "rw": "r",
