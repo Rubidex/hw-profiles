@@ -9,9 +9,9 @@
     "type": "Temperature Sensor",
     "communicationProtocol": "Direct",
     "packetType": "Base64",
-    "decodeItems": 12,
+    "decodeItems": 11,
     "decodeType": "tagValue",
-    "decode": ["0175", "0300", "0367", "0377", "0400", "0467", "0468", "0600", "8367", "8377", "93d7", "94d7"]
+    "decode": ["0175", "0300", "0367", "0400", "0467", "0468", "8367", "8467","8377", "1000", "1001"]
   },
   "0175": {
     "messageName": "Battery",
@@ -52,19 +52,6 @@
       }
     }
   },
-  "0377": {
-    "messageName": "waterlevel",
-    "decodedLen": 2,
-    "payload": {
-      "payload1": {
-        "payloadLen": 2,
-        "payloadName": "Water level",
-        "payloadType": "Integer",
-        "payloadDesc": "water level",
-        "value0": "waterlevel"
-      }
-    }
-  },
   "0400": {
     "messageName": "Magnet_Status_Ch2",
     "decodedLen": 1,
@@ -88,32 +75,6 @@
         "payloadType": "Integer",
         "payloadDesc": "Current Temperature Channel2",
         "value0": "temperature_ch2"
-      }
-    }
-  },
-  "0468": {
-    "messageName": "Humidity_ch1",
-    "decodedLen": 1,
-    "payload": {
-      "payload1": {
-        "payloadLen": 1,
-        "payloadName": "Humidity_ch1",
-        "payloadType": "Integer",
-        "payloadDesc": "Current Humidity Channel2",
-        "value0": "humidity_ch1"
-      }
-    }
-  },
-  "0600": {
-    "messageName": "Door Status",
-    "decodedLen": 1,
-    "payload": {
-      "payload1": {
-        "payloadLen": 1,
-        "payloadName": "DoorStatus",
-        "payloadType": "Integer",
-        "payloadDesc": "Current Door Status",
-        "value0": "doordtatus"
       }
     }
   },
@@ -211,6 +172,20 @@
       }
     }
   },
+  ,
+  "1000": {
+    "name": "RSSI",
+    "influxName": "rssi",
+    "addressType": "Register",
+    "address": "1000",
+    "minValue": -200,
+    "maxValue": 1,
+    "units": "DBm",
+    "dataType": "Word",
+    "multiplier": 1,
+    "rw": "r",
+    "reportInterval": 3600
+  }
   "1001": {
     "name": "Frequency",
     "influxName": "chan",
@@ -218,7 +193,7 @@
     "address": "1001",
     "minValue": 0,
     "maxValue": 1000000,
-    "units": "hz",
+    "units": "KHz",
     "dataType": "Word",
     "multiplier": 0.0001,
     "rw": "r",
