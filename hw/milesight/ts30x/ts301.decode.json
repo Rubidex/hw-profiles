@@ -14,7 +14,7 @@
     "decode": ["0175", "0300", "0367", "0377", "0400", "0467", "0468", "0600", "8367", "8377", "93d7", "94d7"]
   },
   "0175": {
-    "messageName": "Message_Up",
+    "messageName": "Battery",
     "decodedLen": 1,
     "payload": {
       "payload1": {
@@ -184,7 +184,7 @@
       }
     }
   },
-  "94d7": {
+  "94d8": {
     "messageName": "Temperature_chn2 Alarm",
     "decodedLen": 5,
     "payload": {

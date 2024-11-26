@@ -112,6 +112,32 @@
       "multiplier": 1,
       "rw": "r",
       "reportInterval": 3600
+    },
+    {
+      "name": "Signal Strength",
+      "influxName": "rssi",
+      "addressType": "Register",
+      "address": "1000",
+      "minValue": -150,
+      "maxValue": 0,
+      "units": "dbm",
+      "dataType": "Word",
+      "multiplier": 1,
+      "rw": "r",
+      "reportInterval": 3600
+    },
+    {
+      "name": "Frequency",
+      "influxName": "chan",
+      "addressType": "Register",
+      "address": "1001",
+      "minValue": 0,
+      "maxValue": 100000,
+      "units": "hz",
+      "dataType": "Word",
+      "multiplier": 0.0001,
+      "rw": "r",
+      "reportInterval": 3600
     }
   ]
 }
