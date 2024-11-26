@@ -9,11 +9,11 @@
     "type": "Floor Leak Sensor",
     "communicationProtocol": "MQTT",
     "packetType": "Base64",
-    "decodeItems": 2,
-    "decode": ["0175", "0600"]
+    "decodeItems": 4,
+    "decode": ["0175", "0600", "1000", "1001"]
   },
   "0175": {
-    "messageName": "Message_Up",
+    "messageName": "Battery",
     "decodedLen": 1,
     "payload": {
       "payload1": {
@@ -26,16 +26,42 @@
     }
   },
   "0600": {
-    "messageName": "LeakStatus",
+    "messageName": "DoorStatus",
     "decodedLen": 1,
     "payload": {
       "payload1": {
         "payloadLen": 1,
-        "payloadName": "leakStatus",
+        "payloadName": "DoorStatus",
         "payloadType": "Integer",
-        "payloadDesc": "Leak Status",
-        "value0": "leakStatus"
+        "payloadDesc": "Door Status+Temp",
+        "value0": "doorStatus"
       }
     }
+  },
+  "1001": {
+    "name": "rssi",
+    "influxName": "rssi",
+    "addressType": "Register",
+    "address": "1000",
+    "minValue": -200,
+    "maxValue": 100,
+    "units": "dBm",
+    "dataType": "Word",
+    "multiplier": 1,
+    "rw": "r",
+    "reportInterval": 3600
+  },
+  "1001": {
+    "name": "Frequency",
+    "influxName": "chan",
+    "addressType": "Register",
+    "address": "1001",
+    "minValue": 0,
+    "maxValue": 1000000,
+    "units": "KHz",
+    "dataType": "Word",
+    "multiplier": 0.0001,
+    "rw": "r",
+    "reportInterval": 3600
   }
 }
