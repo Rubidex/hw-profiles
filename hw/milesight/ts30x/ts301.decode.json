@@ -22,20 +22,7 @@
         "payloadName": "battery",
         "payloadType": "Integer",
         "payloadDesc": "Battery Level in %",
-        "value0": "batteryT"
-      }
-    }
-  },
-  "0300": {
-    "messageName": "Magnet_Ch1",
-    "decodedLen": 1,
-    "payload": {
-      "payload1": {
-        "payloadLen": 1,
-        "payloadName": "Magnet_Ch1",
-        "payloadType": "Integer",
-        "payloadDesc": "MagnetState Channel1",
-        "value0": "magnet_ch1"
+        "value0": "battery"
       }
     }
   },
@@ -52,6 +39,32 @@
       }
     }
   },
+"0300": {
+  "messageName": "Magnet_Ch1",
+  "decodedLen": 1,
+  "payload": {
+    "payload1": {
+      "payloadLen": 1,
+      "payloadName": "Magnet_Ch1",
+      "payloadType": "Integer",
+      "payloadDesc": "MagnetState Channel1",
+      "value0": "magnet_ch1"
+    }
+  }
+},
+"0467": {
+  "messageName": "Temperature_ch2",
+  "decodedLen": 2,
+  "payload": {
+    "payload1": {
+      "payloadLen": 2,
+      "payloadName": "Temperature_Ch2",
+      "payloadType": "Integer",
+      "payloadDesc": "Current Temperature Channel2",
+      "value0": "temperature_ch2"
+    }
+  }
+},
   "0400": {
     "messageName": "Magnet_Status_Ch2",
     "decodedLen": 1,
@@ -62,19 +75,6 @@
         "payloadType": "Integer",
         "payloadDesc": "Mag_Stat_Ch2",
         "value0": "mag_stat_ch2"
-      }
-    }
-  },
-  "0467": {
-    "messageName": "Temperature_ch2",
-    "decodedLen": 2,
-    "payload": {
-      "payload1": {
-        "payloadLen": 2,
-        "payloadName": "Temperature_Ch2",
-        "payloadType": "Integer",
-        "payloadDesc": "Current Temperature Channel2",
-        "value0": "temperature_ch2"
       }
     }
   },
@@ -98,39 +98,19 @@
       }
     }
   },
-  "8377": {
-    "messageName": "Temp Alarm Ch2",
-    "decodedLen": 3,
-    "payload": {
-      "payload1": {
-        "payloadLen": 2,
-        "payloadName": "temperature_chn2",
-        "payloadType": "Integer",
-        "payloadDesc": "temperature_chn2",
-        "value0": "temperature_chn2"
-      },
-      "payload2": {
-        "payloadLen": 1,
-        "payloadName": "temperature_chn2_alarm",
-        "payloadType": "Integer",
-        "payloadDesc": "temperature_chn2_alarm",
-        "value0": "temperature_chn2_alarm"
-      }
-    }
-  },
   "93d7": {
-    "messageName": "Temperature_chn1 Alarm",
+    "messageName": "Temp Alarm Ch1 Type2",
     "decodedLen": 5,
     "payload": {
       "payload1": {
         "payloadLen": 2,
-        "payloadName": "Temperature_chn1",
+        "payloadName": "temperature_chn1",
         "payloadType": "Integer",
         "payloadDesc": "temperature_chn1",
         "value0": "temperature_chn1"
       },
       "payload2": {
-        "payloadLen": 2,
+        "payloadLen": 1,
         "payloadName": "temperature_chn1_change",
         "payloadType": "Integer",
         "payloadDesc": "temperature_chn1_change",
@@ -145,8 +125,28 @@
       }
     }
   },
-  "94d8": {
-    "messageName": "Temperature_chn2 Alarm",
+  "8467": {
+    "messageName": "Temp Alarm Ch2",
+    "decodedLen": 3,
+    "payload": {
+      "payload1": {
+        "payloadLen": 2,
+        "payloadName": "temperature_chn2",
+        "payloadType": "Integer",
+        "payloadDesc": "temperature_chn2",
+        "value0": "temperature_chn2"
+      },
+      "payload2": {
+        "payloadLen": 1,
+        "payloadName": "temperature_chn1_alarm",
+        "payloadType": "Integer",
+        "payloadDesc": "temperature_chn1_alarm",
+        "value0": "temperature_chn1_alarm"
+      }
+    }
+  },
+  "94d7": {
+    "messageName": "Temperature_chn1 Alarm",
     "decodedLen": 5,
     "payload": {
       "payload1": {
@@ -160,7 +160,7 @@
         "payloadLen": 2,
         "payloadName": "temperature_chn2_change",
         "payloadType": "Integer",
-        "payloadDesc": "temperature_chn12change",
+        "payloadDesc": "temperature_chn2_change",
         "value0": "temperature_chn2_change"
       },
       "payload3": {
@@ -172,7 +172,6 @@
       }
     }
   },
-  ,
   "1000": {
     "name": "RSSI",
     "influxName": "rssi",
@@ -185,7 +184,7 @@
     "multiplier": 1,
     "rw": "r",
     "reportInterval": 3600
-  }
+  },
   "1001": {
     "name": "Frequency",
     "influxName": "chan",
