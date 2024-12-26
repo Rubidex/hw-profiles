@@ -31,7 +31,7 @@
       "maxValue": 100,
       "units": "°C/°F",
       "dataType": "Word",
-      "multiplier": 1,
+      "multiplier": 0.1,
       "rw": "r",
       "reportInterval": 3600
     },
