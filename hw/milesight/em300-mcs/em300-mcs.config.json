@@ -29,7 +29,7 @@
       "address": "0367",
       "minValue": -20,
       "maxValue": 100,
-      "units": "°C/°F",
+      "units": "°C",
       "dataType": "Word",
       "multiplier": 0.1,
       "rw": "r",
@@ -55,7 +55,11 @@
       "address": "0600",
       "minValue": 0,
       "maxValue": 1,
-      "units": "#",
+      "units": "state",
+      "states": {
+        "0": "Closed",
+        "1": "Open"
+      },
       "dataType": "Word",
       "multiplier": 1,
       "rw": "r",
