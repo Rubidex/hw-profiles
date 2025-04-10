@@ -9,6 +9,7 @@
     "type": "Temperature Sensor",
     "communicationProtocol": "Direct",
     "packetType": "Base64",
+    "encodingType": "tagValue",
     "decodeItems": 2,
     "decode": ["0175", "0377"]
   },

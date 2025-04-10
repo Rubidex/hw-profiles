@@ -10,8 +10,8 @@
     "communicationProtocol": "MQTT",
     "packetType": "Base64",
     "decodeItems": 5,
-    "decodeType": "tagValue",
-    "decode": ["0175", "0367", "0468","1000", "1001"],
+    "encodingType": "tagValue",
+    "decode": ["0175", "0367", "0468", "1000", "1001"],
     "mqttMeta": {
       "ApplicationID": "string",
       "ApplicationName": "string"
