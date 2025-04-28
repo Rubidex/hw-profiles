@@ -1,0 +1,89 @@
+{
+  "meta": {
+    "device": "Sensor",
+    "manufacturer": "Milesight",
+    "make": "Temperature Sensor",
+    "desc": "This sensor sends multiple values at the same time beginning with the ID and type as a 2 digit Hex reference, then the value",
+    "model": "EM500-PT100",
+    "sku": "EM500-PT100",
+    "type": "Temperature Sensor",
+    "communicationProtocol": "Direct",
+    "packetType": "Base64",
+    "encodingType": "tagValue",
+    "decodeItems": 4,
+    "decode": ["0175", "0367", "83D7", "20CE"]
+  },
+  "0175": {
+    "messageName": "Battery",
+    "decodedLen": 1,
+    "payload": {
+      "payload1": {
+        "payloadLen": 1,
+        "payloadName": "battery",
+        "payloadType": "Integer",
+        "payloadDesc": "Battery Level in %",
+        "value0": "battery"
+      }
+    }
+  },
+  "0367": {
+    "messageName": "Temperature",
+    "decodedLen": 2,
+    "payload": {
+      "payload1": {
+        "payloadLen": 2,
+        "payloadName": "temperature",
+        "payloadType": "Integer",
+        "payloadDesc": "Temperature in ℃",
+        "value0": "temperature"
+      }
+    }
+  },
+  "83D7": {
+    "messageName": "Temperature Alarm",
+    "decodedLen": 5,
+    "payload": {
+      "payload1": {
+        "payloadLen": 2,
+        "payloadName": "temperature",
+        "payloadType": "Integer",
+        "payloadDesc": "Temperature in ℃",
+        "value0": "temperature"
+      },
+      "payload2": {
+        "payloadLen": 2,
+        "payloadName": "temperature_change",
+        "payloadType": "Integer",
+        "payloadDesc": "Temperature Change in ℃",
+        "value0": "temperature_change"
+      },
+      "payload3": {
+        "payloadLen": 1,
+        "payloadName": "temperature_alarm",
+        "payloadType": "Integer",
+        "payloadDesc": "Temperature Alarm",
+        "value0": "temperature_alarm"
+      }
+    }
+  },
+  "20CE": {
+    "messageName": "Historical Data",
+    "decodedLen": 6,
+    "payload": {
+      "payload1": {
+        "payloadLen": 4,
+        "payloadName": "timestamp",
+        "payloadType": "Integer",
+        "payloadDesc": "Timestamp",
+        "value0": "timestamp"
+      },
+      "payload2": {
+        "payloadLen": 2,
+        "payloadName": "temperature",
+        "payloadType": "Integer",
+        "payloadDesc": "Temperature in ℃",
+        "value0": "temperature"
+      }
+    }
+  }
+}

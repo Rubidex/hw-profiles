@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "device": "Sensor",
+    "manufacturer": "Milesight",
+    "make": "EM500 Series",
+    "model": "EM500-PT100",
+    "sku": "EM500-PT100",
+    "type": "Temperature Sensor",
+    "communicationProtocol": "MQTT"
+  },
+  "registers": [
+    {
+      "name": "Battery",
+      "influxName": "battery",
+      "addressType": "Register",
+      "address": "0175",
+      "minValue": 0,
+      "maxValue": 100,
+      "units": "%",
+      "dataType": "Word",
+      "multiplier": 1,
+      "rw": "r",
+      "reportInterval": 3600
+    },
+    {
+      "name": "Temperature",
+      "influxName": "temperature",
+      "addressType": "Register",
+      "address": "0367",
+      "minValue": -40,
+      "maxValue": 125,
+      "units": "°C",
+      "dataType": "Word",
+      "multiplier": 1,
+      "rw": "r",
+      "reportInterval": 3600
+    },
+    {
+      "name": "Temperature Alarm",
+      "influxName": "temperature_alarm",
+      "addressType": "Register",
+      "address": "83D7",
+      "minValue": -40,
+      "maxValue": 125,
+      "units": "°C",
+      "dataType": "Word",
+      "multiplier": 1,
+      "rw": "r",
+      "reportInterval": 3600
+    },
+    {
+      "name": "Historical Data",
+      "influxName": "historical_temperature",
+      "addressType": "Register",
+      "address": "20CE",
+      "minValue": -40,
+      "maxValue": 125,
+      "units": "°C",
+      "dataType": "Word",
+      "multiplier": 1,
+      "rw": "r",
+      "reportInterval": 3600
+    }
+  ]
+}
