@@ -10,17 +10,13 @@
   },
   "MQTT": [
     {
-      "gatewayID": "Base64",
+      "gateway": "Base64",
       "ip": "text",
       "time": "text",
-      "location": "text",
-      "configVersion": "",
       "rxPacketsReceived": "text",
       "rxPacketsReceivedOK": "text",
       "txPacketsReceived": "text",
-      "txPacketsEmitted": "text",
-      "rw": "r",
-      "reportInterval": 300
+      "txPacketsEmitted": "text"
     }
   ]
 }
