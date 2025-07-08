@@ -8,92 +8,78 @@
     "type": "Gas Meter",
     "communicationProtocol": "Direct",
     "packetType": "Base64",
-    "decode": ["0x04", "0x41"]
+    "encodingType": "sequential"
   },
-  "0x04": {
+  "default": {
     "messageName": "MSG_UP_GAS_METER",
     "decodedLen": 10,
-    "payload": [
-      {
-        "payload_1_Len": 1,
+    "payload": {
+      "payload1": {
+        "payloadLen": 1,
         "payloadName": "status1",
         "payloadType": "bitmap",
-        "payloadDesc": "Register of gas meter status #1",
-        "value0": "FLG_LOW_BAT",
-        "value1": "FLG_MOTION_DETECT",
-        "value2": "FLG_MAGNET_DETECT",
-        "value3": "FLG_TAMPER_DETECT",
-        "value4": "STS_VALVE",
-        "value5": "STS_VALVE",
-        "value6": "STS_VALVE",
-        "value7": "FLG_ERR_OVRERFLOW"
+        "payloadDesc": "Gas meter status #1",
+        "bitLabels": [
+          "FLG_LOW_BAT",
+          "FLG_MOTION_DETECT",
+          "FLG_MAGNET_DETECT",
+          "FLG_TAMPER_DETECT",
+          "STS_VALVE_1",
+          "STS_VALVE_2",
+          "STS_VALVE_3",
+          "FLG_ERR_OVRERFLOW"
+        ]
       },
-      {
-        "payload_2_Len": 1,
+      "payload2": {
+        "payloadLen": 1,
         "payloadName": "status2",
         "payloadType": "bitmap",
-        "payloadDesc": "Register of gas meter status #2",
-        "value0": "FLG_ERR_REVERSE",
-        "value1": "FLG_ERR_SENSOR",
-        "value2": "FLG_ERR_GAS",
-        "value3": "FLG_ERR_TIME",
-        "value4": "RESERVED",
-        "value5": "FLG_POWER_ON",
-        "value6": "FLG_LOCK",
-        "value7": "FLG_CFG_DONE"
+        "payloadDesc": "Gas meter status #2",
+        "bitLabels": [
+          "FLG_ERR_REVERSE",
+          "FLG_ERR_SENSOR",
+          "FLG_ERR_GAS",
+          "FLG_ERR_TIME",
+          "RESERVED",
+          "FLG_POWER_ON",
+          "FLG_LOCK",
+          "FLG_CFG_DONE"
+        ]
       },
-      {
-        "payload_3_Len": 1,
+      "payload3": {
+        "payloadLen": 1,
         "payloadName": "Model",
         "payloadType": "bitmap",
         "payloadDesc": "Gas meter model",
-        "value0": "METER_CLASS",
-        "value1": "METER_CLASS",
-        "value2": "METER_CLASS",
-        "value3": "METER_UNITS",
-        "value4": "Reserved",
-        "value5": "Reserved",
-        "value6": "Reserved",
-        "value7": "Reserved"
+        "bitLabels": [
+          "METER_CLASS_0",
+          "METER_CLASS_1",
+          "METER_CLASS_2",
+          "METER_UNITS",
+          "Reserved_4",
+          "Reserved_5",
+          "Reserved_6",
+          "Reserved_7"
+        ]
       },
-      {
-        "payload_4_Len": 3,
+      "payload4": {
+        "payloadLen": 3,
         "payloadName": "Serial",
-        "payloadType": "integer",
-        "payloadDesc": "Serial number of gas meter. Unsigned integer",
-        "value0": "Serial"
+        "payloadType": "hexstring",
+        "payloadDesc": "Serial number (hex string, 3 bytes)"
       },
-      {
-        "payload_5_Len": 4,
+      "payload5": {
+        "payloadLen": 4,
         "payloadName": "Volume",
         "payloadType": "integer",
-        "payloadDesc": "Total volume, unit of measure: liter or ft3. Unsigned integer",
-        "value0": "volume"
-      }
-    ]
-  },
-  "0x41": {
-    "messageName": "MSG_UP_TIME",
-    "decodedLen": 6,
-    "payload": [
-      {
-        "payload1": {
-          "payload_1_Len": 4,
-          "payloadName": "CurrentTime",
-          "payloadType": "Integer",
-          "payloadDesc": "Current DeviceTime",
-          "value0": "currentDeviceTime"
-        }
+        "payloadDesc": "Total volume, unsigned integer, divide by 1000 for value in m³"
       },
-      {
-        "payload2": {
-          "payload_1_Len": 2,
-          "payloadName": "Debug",
-          "payloadType": "Integer",
-          "payloadDesc": "Debugging information for developers",
-          "value0": "Debug"
-        }
+      "payload6": {
+        "payloadLen": 2,
+        "payloadName": "Temp",
+        "payloadType": "integer",
+        "payloadDesc": "Temperature (optional, only if payload is 12 bytes)"
       }
-    ]
+    }
   }
 }
