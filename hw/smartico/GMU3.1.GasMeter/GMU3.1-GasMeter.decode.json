@@ -17,7 +17,7 @@
       "payload1": {
         "payloadLen": 1,
         "payloadName": "status1",
-        "payloadType": "bitmap",
+        "payloadType": "Bitmap",
         "payloadDesc": "Gas meter status #1",
         "bitLabels": [
           "FLG_LOW_BAT",
@@ -33,7 +33,7 @@
       "payload2": {
         "payloadLen": 1,
         "payloadName": "status2",
-        "payloadType": "bitmap",
+        "payloadType": "Bitmap",
         "payloadDesc": "Gas meter status #2",
         "bitLabels": [
           "FLG_ERR_REVERSE",
@@ -49,7 +49,7 @@
       "payload3": {
         "payloadLen": 1,
         "payloadName": "Model",
-        "payloadType": "bitmap",
+        "payloadType": "Bitmap",
         "payloadDesc": "Gas meter model",
         "bitLabels": [
           "METER_CLASS_0",
@@ -65,19 +65,19 @@
       "payload4": {
         "payloadLen": 3,
         "payloadName": "Serial",
-        "payloadType": "hexstring",
+        "payloadType": "Hex",
         "payloadDesc": "Serial number (hex string, 3 bytes)"
       },
       "payload5": {
         "payloadLen": 4,
         "payloadName": "Volume",
-        "payloadType": "integer",
-        "payloadDesc": "Total volume, unsigned integer, divide by 1000 for value in m³"
+        "payloadType": "Integer",
+        "payloadDesc": "Total volume, unsigned Integer, divide by 1000 for value in m³"
       },
       "payload6": {
         "payloadLen": 2,
         "payloadName": "Temp",
-        "payloadType": "integer",
+        "payloadType": "Integer",
         "payloadDesc": "Temperature (optional, only if payload is 12 bytes)"
       }
     }
