@@ -11,35 +11,35 @@
   "registers": [
     {
       "name": "Status 1",
-      "dataKey": "status1",
+      "influxName": "status1",
       "units": "bitmap",
       "dataType": "bitmap",
       "desc": "Gas meter status #1"
     },
     {
       "name": "Status 2",
-      "dataKey": "status2",
+      "influxName": "status2",
       "units": "bitmap",
       "dataType": "bitmap",
       "desc": "Gas meter status #2"
     },
     {
       "name": "Model",
-      "dataKey": "Model",
+      "influxName": "Model",
       "units": "bitmap",
       "dataType": "bitmap",
       "desc": "Gas meter model"
     },
     {
       "name": "Serial",
-      "dataKey": "Serial",
+      "influxName": "Serial",
       "units": "",
       "dataType": "Hexstring",
       "desc": "Serial number (hex string, 3 bytes)"
     },
     {
       "name": "Volume",
-      "dataKey": "Volume",
+      "influxName": "Volume",
       "units": "m³",
       "dataType": "integer",
       "multiplier": 0.001,
@@ -47,7 +47,7 @@
     },
     {
       "name": "Temp",
-      "dataKey": "Temp",
+      "influxName": "Temp",
       "units": "°C",
       "dataType": "integer",
       "multiplier": 0.01,
