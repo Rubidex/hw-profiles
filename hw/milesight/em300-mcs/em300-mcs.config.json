@@ -4,57 +4,86 @@
     "manufacturer": "Milesight",
     "make": "EM300 Series",
     "model": "EM300-MCS",
-    "sku": "",
-    "type": "Thermostat",
-    "communicationProtocol": "MQTT"
+    "sku": "EM300-MCS",
+    "type": "Door/Temperature Sensor",
+    "communicationProtocol": "LoRaWAN",
+    "description": "This sensor sends multiple values at the same time beginning with the ID and type as a 2 digit Hex reference, then the value"
+  },
+  "json": {
+    "topic": "/devices/em300",
+    "payloadField": "data",
+    "deviceIdField": "devEUI",
+    "timestampField": "time",
+    "keys": [
+      { "name": "gatewayId", "path": "rxInfo.gatewayID" },
+      { "name": "rssi", "path": "rxInfo.rssi" },
+      { "name": "fCnt", "path": "fCnt" }
+    ],
+    "payloadEncoding": "Base64",
+    "payloadFormat": "tagValue"
   },
   "registers": [
     {
       "name": "Battery",
-      "influxName": "battery",
+      "category": "Power",
+      "description": "Battery  Level in %",
+      "dataKey": "battery",
       "addressType": "Register",
       "address": "0175",
       "minValue": 0,
       "maxValue": 100,
+      "defaultValue": 0,
       "units": "%",
       "dataType": "Word",
       "multiplier": 1,
       "rw": "r",
-      "reportInterval": 21600
+      "reportInterval": 21600,
+      "decodeLength": 1
     },
     {
       "name": "Temperature",
-      "influxName": "temp",
+      "category": "Measurement",
+      "description": "Current Temperature",
+      "dataKey": "temp",
       "addressType": "Register",
       "address": "0367",
       "minValue": -20,
       "maxValue": 100,
+      "defaultValue": 0,
       "units": "°C",
       "dataType": "Word",
       "multiplier": 0.1,
       "rw": "r",
-      "reportInterval": 3600
+      "reportInterval": 3600,
+      "decodeLength": 2
     },
     {
       "name": "Humidity",
-      "influxName": "humidity",
+      "category": "Measurement",
+      "description": "Current Humidity",
+      "dataKey": "humidity",
       "addressType": "Register",
       "address": "0468",
       "minValue": 0,
       "maxValue": 100,
+      "defaultValue": 0,
       "units": "%",
       "dataType": "Word",
       "multiplier": 1,
       "rw": "r",
-      "reportInterval": 3600
+      "reportInterval": 3600,
+      "decodeLength": 1
     },
     {
-      "name": "DoorStatus",
-      "influxName": "magnetCh1",
+      "name": "Door Status",
+      "category": "Status",
+      "description": "Door Status (0=Closed, 1=Open)",
+      "dataKey": "magnetCh1",
       "addressType": "Register",
       "address": "0600",
       "minValue": 0,
       "maxValue": 1,
+      "defaultValue": 0,
       "units": "state",
       "states": {
         "0": "Closed",
@@ -63,33 +92,55 @@
       "dataType": "Word",
       "multiplier": 1,
       "rw": "r",
-      "reportInterval": 3600
+      "reportInterval": 3600,
+      "decodeLength": 1
     },
     {
       "name": "Signal Strength",
-      "influxName": "rssi",
+      "category": "Communication",
+      "description": "Signal Strength (RSSI)",
+      "dataKey": "rssi",
       "addressType": "Register",
       "address": "1000",
       "minValue": -150,
       "maxValue": 0,
+      "defaultValue": 0,
       "units": "dbm",
       "dataType": "Word",
       "multiplier": 1,
       "rw": "r",
-      "reportInterval": 3600
+      "reportInterval": 3600,
+      "decodeLength": 1
     },
     {
       "name": "Frequency",
-      "influxName": "chan",
+      "category": "Communication",
+      "description": "Channel Frequency",
+      "dataKey": "chan",
       "addressType": "Register",
       "address": "1001",
       "minValue": 0,
       "maxValue": 1000000,
+      "defaultValue": 0,
       "units": "hz",
       "dataType": "Word",
       "multiplier": 0.0001,
       "rw": "r",
-      "reportInterval": 3600
+      "reportInterval": 3600,
+      "decodeLength": 1
+    }
+  ],
+  "commands": [
+    {
+      "name": "Set Reporting Interval",
+      "description": "Set the reporting interval for the sensor",
+      "topic": "/devices/milesight/em300-mcs/commands",
+      "payloadTemplate": {
+        "devEui": "{{devEui}}",
+        "registerAddress": "FF03",
+        "value": "{{interval}}"
+      },
+      "encoding": "Hex"
     }
   ]
 }

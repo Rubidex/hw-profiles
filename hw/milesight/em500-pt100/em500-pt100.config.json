@@ -8,58 +8,87 @@
     "type": "Temperature Sensor",
     "communicationProtocol": "MQTT"
   },
+  "json": {
+    "topic": "/devices/em500-pt100",
+    "payloadField": "data",
+    "deviceIdField": "devEUI",
+    "timestampField": "time",
+    "keys": [
+      { "name": "gatewayId", "path": "rxInfo.gatewayID" },
+      { "name": "rssi", "path": "rxInfo.rssi" },
+      { "name": "fCnt", "path": "fCnt" }
+    ],
+    "payloadEncoding": "Base64",
+    "payloadFormat": "tagValue"
+  },
   "registers": [
     {
       "name": "Battery",
-      "influxName": "battery",
+      "category": "Power",
+      "description": "Battery Level in %",
+      "dataKey": "battery",
       "addressType": "Register",
       "address": "0175",
       "minValue": 0,
       "maxValue": 100,
+      "defaultValue": 0,
       "units": "%",
-      "dataType": "Word",
-      "multiplier": 1,
       "rw": "r",
-      "reportInterval": 3600
+      "reportInterval": 3600,
+      "decodeLength": 1,
+      "multiplier": 1,
+      "dataType": "Word"
     },
     {
       "name": "Temperature",
-      "influxName": "temperature",
+      "category": "Measurement",
+      "description": "Temperature in ℃",
+      "dataKey": "temperature",
       "addressType": "Register",
       "address": "0367",
       "minValue": -40,
       "maxValue": 125,
+      "defaultValue": 0,
       "units": "°C",
-      "dataType": "Word",
-      "multiplier": 0.1,
       "rw": "r",
-      "reportInterval": 3600
+      "reportInterval": 3600,
+      "decodeLength": 2,
+      "multiplier": 0.1,
+      "dataType": "Word"
     },
     {
       "name": "Temperature Alarm",
-      "influxName": "temperature_alarm",
+      "category": "Alarm",
+      "description": "Temperature Alarm",
+      "dataKey": "temperature_alarm",
       "addressType": "Register",
       "address": "83D7",
       "minValue": -40,
       "maxValue": 125,
+      "defaultValue": 0,
       "units": "°C",
-      "dataType": "Word",
-      "multiplier": 1,
       "rw": "r",
-      "reportInterval": 3600
+      "reportInterval": 3600,
+      "decodeLength": 5,
+      "multiplier": 1,
+      "dataType": "Word"
     },
     {
       "name": "Historical Data",
-      "influxName": "historical_temperature",
+      "category": "Measurement",
+      "description": "Historical Temperature Data",
+      "dataKey": "historical_temperature",
       "addressType": "Register",
       "address": "20CE",
       "minValue": -40,
       "maxValue": 125,
+      "defaultValue": 0,
       "units": "°C",
-      "dataType": "Word",
-      "multiplier": 1,
       "rw": "r",
-      "reportInterval": 3600
+      "reportInterval": 3600,
+      "decodeLength": 6,
+      "multiplier": 1,
+      "dataType": "Word"
     }
   ]
 }

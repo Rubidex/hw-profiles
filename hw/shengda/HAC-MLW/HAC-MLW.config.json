@@ -11,7 +11,7 @@
   "registers": [
     {
       "name": "Pulse Count",
-      "influxName": "pCnt",
+      "dataKey": "pCnt",
       "addressType": "Register",
       "address": "0b",
       "minValue": 0,
@@ -24,7 +24,7 @@
     },
     {
       "name": "Meter Mode",
-      "influxName": "Mode",
+      "dataKey": "Mode",
       "addressType": "Register",
       "address": "12",
       "minValue": 0,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Pulse Constant",
-      "influxName": "Constant",
+      "dataKey": "Constant",
       "addressType": "Register",
       "address": "14",
       "minValue": 0,
@@ -50,7 +50,7 @@
     },
     {
       "name": "MeterID",
-      "influxName": "MeterID",
+      "dataKey": "MeterID",
       "addressType": "Register",
       "address": "16",
       "minValue": 0,
@@ -63,7 +63,7 @@
     },
     {
       "name": "PacketSequence",
-      "influxName": "fCnt",
+      "dataKey": "fCnt",
       "addressType": "Register",
       "address": "19",
       "minValue": 0,
@@ -76,7 +76,7 @@
     },
     {
       "name": "Battery Voltage",
-      "influxName": "Battery",
+      "dataKey": "Battery",
       "addressType": "Register",
       "address": "1a",
       "minValue": 0,
@@ -89,7 +89,7 @@
     },
     {
       "name": "Meter Type",
-      "influxName": "Type",
+      "dataKey": "Type",
       "addressType": "Register",
       "address": "1b",
       "minValue": 0,
@@ -102,7 +102,7 @@
     },
     {
       "name": "Trigger Source",
-      "influxName": "Trigger",
+      "dataKey": "Trigger",
       "addressType": "Register",
       "address": "23",
       "minValue": 0,
@@ -115,7 +115,7 @@
     },
     {
       "name": "Device Status",
-      "influxName": "Status",
+      "dataKey": "Status",
       "addressType": "Register",
       "address": "33",
       "minValue": 0,

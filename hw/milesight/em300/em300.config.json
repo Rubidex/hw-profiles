@@ -6,12 +6,12 @@
     "model": "EM300-TH",
     "sku": "",
     "type": "Thermostat",
-    "communicationProtocol": "MQTT"
+    "communicationProtocol": "LoRaWAN"
   },
   "registers": [
     {
       "name": "Signal Strength",
-      "influxName": "rssi",
+      "dataKey": "rssi",
       "addressType": "Register",
       "address": "1000",
       "minValue": -150,
@@ -24,7 +24,7 @@
     },
     {
       "name": "Frequency",
-      "influxName": "chan",
+      "dataKey": "chan",
       "addressType": "Register",
       "address": "1001",
       "minValue": 0,
@@ -37,7 +37,7 @@
     },
     {
       "name": "Battery",
-      "influxName": "battery",
+      "dataKey": "battery",
       "addressType": "Register",
       "address": "0175",
       "minValue": 0,
@@ -50,7 +50,7 @@
     },
     {
       "name": "Temperature",
-      "influxName": "temp",
+      "dataKey": "temp",
       "addressType": "Register",
       "address": "0467",
       "minValue": -20,
@@ -63,7 +63,7 @@
     },
     {
       "name": "Humidity",
-      "influxName": "humidity",
+      "dataKey": "humidity",
       "addressType": "Register",
       "address": "0468",
       "minValue": 0,

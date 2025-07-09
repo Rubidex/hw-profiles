@@ -11,7 +11,7 @@
   "registers": [
     {
       "name": "AO_Cool",
-      "influxName": "value2",
+      "dataKey": "ao_cool",
       "addressType": "Register",
       "address": "0001",
       "minValue": 0,
@@ -23,7 +23,7 @@
     },
     {
       "name": "AO_Heat",
-      "influxName": "value2",
+      "dataKey": "ao_heat",
       "addressType": "Register",
       "address": "0002",
       "minValue": 0,
@@ -35,7 +35,7 @@
     },
     {
       "name": "AO_Fan",
-      "influxName": "value2",
+      "dataKey": "ao_fan",
       "addressType": "Register",
       "address": "0003",
       "minValue": 0,
@@ -47,7 +47,7 @@
     },
     {
       "name": "SetPointCool",
-      "influxName": "value2",
+      "dataKey": "setpoint_cool",
       "addressType": "Register",
       "address": "0005",
       "minValue": 5,
@@ -61,7 +61,7 @@
     },
     {
       "name": "SetPointHeat",
-      "influxName": "value2",
+      "dataKey": "setpoint_heat",
       "addressType": "Register",
       "address": "0006",
       "minValue": 5,
@@ -75,7 +75,7 @@
     },
     {
       "name": "Mode",
-      "influxName": "value2",
+      "dataKey": "mode",
       "addressType": "Register",
       "address": "0009",
       "minValue": 0,
@@ -95,7 +95,7 @@
     },
     {
       "name": "FanSpeed",
-      "influxName": "value2",
+      "dataKey": "fan_speed",
       "addressType": "Register",
       "address": "000B",
       "minValue": 0,
@@ -115,7 +115,7 @@
     },
     {
       "name": "Occupancy",
-      "influxName": "value2",
+      "dataKey": "occupancy",
       "addressType": "Register",
       "address": "0012",
       "minValue": 0,
@@ -132,7 +132,7 @@
     },
     {
       "name": "FanState",
-      "influxName": "value2",
+      "dataKey": "fan_state",
       "addressType": "Register",
       "address": "000e",
       "minValue": 0,
@@ -152,7 +152,7 @@
     },
     {
       "name": "C_F_Scale",
-      "influxName": "value2",
+      "dataKey": "c_f_scale",
       "addressType": "Register",
       "address": "005A",
       "minValue": 0,
@@ -167,6 +167,93 @@
         "0": "°F",
         "1": "°C"
       }
+    }
+  ],
+  "commands": [
+    {
+      "name": "Set Cooling Setpoint",
+      "description": "Set the cooling setpoint temperature",
+      "topic": "/devices/mts/commands",
+      "payloadTemplate": {
+        "registerAddress": "0005",
+        "value": "{{setpoint}}"
+      },
+      "encoding": "Hex",
+      "fields": [
+        {
+          "name": "setpoint",
+          "type": "Hex",
+          "description": "Cooling setpoint value (°C/°F * 10, e.g., 230 for 23.0°C)"
+        }
+      ]
+    },
+    {
+      "name": "Set Heating Setpoint",
+      "description": "Set the heating setpoint temperature",
+      "topic": "/devices/mts/commands",
+      "payloadTemplate": {
+        "registerAddress": "0006",
+        "value": "{{setpoint}}"
+      },
+      "encoding": "Hex",
+      "fields": [
+        {
+          "name": "setpoint",
+          "type": "Hex",
+          "description": "Heating setpoint value (°C/°F * 10, e.g., 220 for 22.0°C)"
+        }
+      ]
+    },
+    {
+      "name": "Set Mode",
+      "description": "Set the operating mode (Fan, Cool, Heat, Auto)",
+      "topic": "/devices/meitav-tec/mts/commands",
+      "payloadTemplate": {
+        "registerAddress": "0009",
+        "value": "{{mode}}"
+      },
+      "encoding": "Hex",
+      "fields": [
+        {
+          "name": "mode",
+          "type": "Hex",
+          "description": "Mode value (0: Fan, 1: Cool, 2: Heat, 3: Auto)"
+        }
+      ]
+    },
+    {
+      "name": "Set Fan Speed",
+      "description": "Set the fan speed (Auto, Low, Medium, High)",
+      "topic": "/devices/mts/commands",
+      "payloadTemplate": {
+        "registerAddress": "000B",
+        "value": "{{fanSpeed}}"
+      },
+      "encoding": "Hex",
+      "fields": [
+        {
+          "name": "fanSpeed",
+          "type": "Hex",
+          "description": "Fan speed value (0: Auto, 1: Low, 2: Medium, 3: High)"
+        }
+      ]
+    },
+    {
+      "name": "Set C/F Scale",
+      "description": "Set Celsius or Fahrenheit scale",
+      "topic": "/devices/mts/commands",
+      "payloadTemplate": {
+        "registerAddress": "005A",
+        "value": "{{scale}}"
+      },
+      "encoding": "Hex",
+      "fields": [
+        {
+          "name": "scale",
+          "type": "Hex",
+          "description": "Scale value (0: °F, 1: °C)"
+        }
+      ]
     }
   ]
 }

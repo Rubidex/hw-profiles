@@ -1,39 +1,75 @@
 {
   "meta": {
+    "version": "1.0",
     "device": "Sensor",
     "manufacturer": "Milesight",
     "make": "EM500 Series",
     "model": "EM500-SWL-915",
     "sku": "EM500-SWL-915",
     "type": "Water Level Sensor",
-    "communicationProtocol": "MQTT"
+    "communicationProtocol": "LoRaWAN",
+    "description": "Configuration for the EM500-SWL water level sensor."
+  },
+  "json": {
+    "topic": "/devices/em300",
+    "deviceIdField": "devEUI",
+    "timestampField": "time",
+    "keys": [
+      { "name": "gatewayId", "path": "rxInfo.gatewayID" },
+      { "name": "rssi", "path": "rxInfo.rssi" },
+      { "name": "fCnt", "path": "fCnt" }
+    ],
+    "payloadField": "data",
+    "payloadEncoding": "Base64",
+    "payloadFormat": "tagValue"
   },
   "registers": [
     {
-      "name": "battery",
-      "influxName": "battery",
-      "addressType": "Register",
+      "name": "Battery",
+      "category": "Power",
+      "description": "Battery Level in %",
+      "dataKey": "battery",
       "address": "0175",
+      "addressType": "Register",
       "minValue": 0,
       "maxValue": 100,
+      "defaultValue": 0,
       "units": "%",
-      "dataType": "Word",
+      "rw": "rw",
+      "reportInterval": 3600,
+      "decodeLength": 1,
       "multiplier": 1,
-      "rw": "r",
-      "reportInterval": 3600
+      "dataType": "Word"
     },
     {
       "name": "Water Level",
-      "influxName": "tanklvl",
+      "category": "Measurement",
+      "description": "Water Level in mm",
+      "dataKey": "tanklvl",
       "addressType": "Register",
       "address": "0377",
       "minValue": 0,
-      "maxValue": 1,
-      "units": "MM",
-      "dataType": "Word",
+      "maxValue": 65535,
+      "defaultValue": 0,
+      "units": "cm",
+      "rw": "rw",
+      "reportInterval": 3600,
       "multiplier": 1,
-      "rw": "r",
-      "reportInterval": 3600
+      "decodeLength": 2,
+      "dataType": "Word"
+    }
+  ],
+  "commands": [
+    {
+      "name": "Set Reporting Interval",
+      "description": "Set the reporting interval for the sensor",
+      "topic": "/devices/milesight/em500-swl/commands",
+      "payloadTemplate": {
+        "devEui": "{{devEui}}",
+        "registerAddress": "FF03",
+        "value": "{{interval}}"
+      },
+      "encoding": "Hex"
     }
   ]
 }

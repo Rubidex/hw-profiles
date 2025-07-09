@@ -1,5 +1,6 @@
 {
   "meta": {
+    "version": "1.0",
     "device": "Sensor",
     "manufacturer": "Milesight",
     "make": "TS30x Series",
@@ -8,10 +9,23 @@
     "type": "Thermostat",
     "communicationProtocol": "MQTT"
   },
+  "json": {
+    "topic": "/devices/ts30x",
+    "payloadField": "data",
+    "deviceIdField": "devEUI",
+    "timestampField": "time",
+    "keys": [
+      { "name": "gatewayId", "path": "rxInfo.gatewayID" },
+      { "name": "rssi", "path": "rxInfo.rssi" },
+      { "name": "fCnt", "path": "fCnt" }
+    ],
+    "payloadEncoding": "Base64",
+    "payloadFormat": "tagValue"
+  },
   "registers": [
     {
-      "name": "battery",
-      "influxName": "battery",
+      "name": "Battery",
+      "dataKey": "battery",
       "addressType": "Register",
       "address": "0175",
       "minValue": 0,
@@ -20,24 +34,26 @@
       "dataType": "Word",
       "multiplier": 1,
       "rw": "r",
-      "reportInterval": 3600
+      "reportInterval": 3600,
+      "decodeLength": 1
     },
     {
       "name": "Temperature_ch1",
-      "influxName": "temp",
+      "dataKey": "temp",
       "addressType": "Register",
       "address": "0367",
       "minValue": -20,
       "maxValue": 100,
-      "units": "°Ç",
+      "units": "°C",
       "dataType": "Word",
       "multiplier": 0.1,
       "rw": "r",
-      "reportInterval": 3600
+      "reportInterval": 3600,
+      "decodeLength": 2
     },
     {
       "name": "Magnet_ch1",
-      "influxName": "magnet_ch1",
+      "dataKey": "magnet_ch1",
       "addressType": "Register",
       "address": "0300",
       "minValue": 0,
@@ -46,11 +62,12 @@
       "dataType": "Word",
       "multiplier": 1,
       "rw": "r",
-      "reportInterval": 3600
+      "reportInterval": 3600,
+      "decodeLength": 1
     },
     {
       "name": "Temperature_ch2",
-      "influxName": "temp_ch2",
+      "dataKey": "temp_ch2",
       "addressType": "Register",
       "address": "0467",
       "minValue": -20,
@@ -59,11 +76,12 @@
       "dataType": "Word",
       "multiplier": 0.1,
       "rw": "r",
-      "reportInterval": 3600
+      "reportInterval": 3600,
+      "decodeLength": 2
     },
     {
       "name": "Magnet_ch2",
-      "influxName": "magnet_ch2",
+      "dataKey": "magnet_ch2",
       "addressType": "Register",
       "address": "0400",
       "minValue": 0,
@@ -72,11 +90,12 @@
       "dataType": "Word",
       "multiplier": 1,
       "rw": "r",
-      "reportInterval": 3600
+      "reportInterval": 3600,
+      "decodeLength": 1
     },
     {
       "name": "TempAlarm_ch1",
-      "influxName": "temp_alarm_ch1",
+      "dataKey": "temp_alarm_ch1",
       "addressType": "Register",
       "address": "8367",
       "minValue": 0,
@@ -85,11 +104,12 @@
       "dataType": "Word",
       "multiplier": 1,
       "rw": "r",
-      "reportInterval": 3600
+      "reportInterval": 3600,
+      "decodeLength": 3
     },
     {
       "name": "TempAlarm_ch1-Type2",
-      "influxName": "temp_alarm_ch2_t2",
+      "dataKey": "temp_alarm_ch2_t2",
       "addressType": "Register",
       "address": "93d7",
       "minValue": 0,
@@ -98,11 +118,12 @@
       "dataType": "Word",
       "multiplier": 1,
       "rw": "r",
-      "reportInterval": 3600
+      "reportInterval": 3600,
+      "decodeLength": 5
     },
     {
       "name": "TempAlarm_ch2",
-      "influxName": "temp_alarm_ch2",
+      "dataKey": "temp_alarm_ch2",
       "addressType": "Register",
       "address": "8467",
       "minValue": 0,
@@ -111,11 +132,12 @@
       "dataType": "Word",
       "multiplier": 1,
       "rw": "r",
-      "reportInterval": 3600
+      "reportInterval": 3600,
+      "decodeLength": 3
     },
     {
       "name": "TempAlarm_ch2_type2",
-      "influxName": "temp_alarm_ch2_t2",
+      "dataKey": "temp_alarm_ch2_t2",
       "addressType": "Register",
       "address": "94d7",
       "minValue": 0,
@@ -124,11 +146,12 @@
       "dataType": "Word",
       "multiplier": 1,
       "rw": "r",
-      "reportInterval": 3600
+      "reportInterval": 3600,
+      "decodeLength": 5
     },
     {
       "name": "Signal Strength",
-      "influxName": "rssi",
+      "dataKey": "rssi",
       "addressType": "Register",
       "address": "1000",
       "minValue": -150,
@@ -137,11 +160,12 @@
       "dataType": "Word",
       "multiplier": 1,
       "rw": "r",
-      "reportInterval": 3600
+      "reportInterval": 3600,
+      "decodeLength": 1
     },
     {
       "name": "Frequency",
-      "influxName": "chan",
+      "dataKey": "chan",
       "addressType": "Register",
       "address": "1001",
       "minValue": 0,
@@ -150,7 +174,21 @@
       "dataType": "Word",
       "multiplier": 0.0001,
       "rw": "r",
-      "reportInterval": 3600
+      "reportInterval": 3600,
+      "decodeLength": 1
+    }
+  ],
+  "commands": [
+    {
+      "name": "Set Reporting Interval",
+      "description": "Set the reporting interval for the sensor",
+      "topic": "/devices/milesight/ts301/commands",
+      "payloadTemplate": {
+        "devEui": "{{devEui}}",
+        "registerAddress": "FF03",
+        "value": "{{interval}}"
+      },
+      "encoding": "Hex"
     }
   ]
 }

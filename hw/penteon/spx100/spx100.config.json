@@ -1,0 +1,13 @@
+{
+  "meta": {
+    "device": "Smart Controller.Parson",
+    "manufacturer": "Penteon",
+    "make": "SPX100 Series",
+    "model": "SPX100-v1.0",
+    "sku": "SPX100-Mar2024",
+    "type": "Smart Controller",
+    "communicationProtocol": "MQTT",
+    "desc": "This is a smart controller and will have a different configuration for every customer as various I/O modules will be connected to it"
+  },
+  "registers": []
+}

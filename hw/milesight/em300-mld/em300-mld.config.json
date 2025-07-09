@@ -1,65 +1,109 @@
 {
   "meta": {
+    "version": "1.0",
     "device": "Sensor",
     "manufacturer": "Milesight",
     "make": "EM300 Series",
     "model": "EM300-MLD",
     "sku": "EM300-MLD",
     "type": "Leak Detection",
-    "communicationProtocol": "MQTT"
+    "communicationProtocol": "MQTT",
+    "description": "Configuration for the EM300-MLD leak detection sensor."
+  },
+  "json": {
+    "topic": "/devices/em300",
+    "payloadField": "data",
+    "deviceIdField": "devEUI",
+    "timestampField": "time",
+    "keys": [
+      { "name": "gatewayId", "path": "rxInfo.gatewayID" },
+      { "name": "rssi", "path": "rxInfo.rssi" },
+      { "name": "fCnt", "path": "fCnt" }
+    ],
+    "payloadEncoding": "Base64",
+    "payloadFormat": "tagValue"
   },
   "registers": [
     {
       "name": "Battery",
-      "influxName": "battery",
+      "category": "Power",
+      "description": "Battery Level in %",
+      "dataKey": "battery",
       "addressType": "Register",
       "address": "0175",
       "minValue": 0,
       "maxValue": 100,
+      "defaultValue": 0,
       "units": "%",
       "dataType": "Word",
       "multiplier": 1,
       "rw": "r",
-      "reportInterval": 21600
+      "reportInterval": 21600,
+      "decodeLength": 1
     },
     {
-      "name": "LeakStatus",
-      "influxName": "asset_state",
+      "name": "Leak Status",
+      "category": "Status",
+      "description": "Leak detected (0=No Leak, 1=Leak)",
+      "dataKey": "asset_state",
       "addressType": "Register",
       "address": "0600",
       "minValue": 0,
       "maxValue": 1,
-      "units": "%",
+      "defaultValue": 0,
+      "units": "",
       "dataType": "Word",
       "multiplier": 1,
       "rw": "r",
-      "reportInterval": 3600
+      "reportInterval": 3600,
+      "decodeLength": 1
     },
     {
       "name": "Signal Strength",
-      "influxName": "rssi",
+      "category": "Communication",
+      "description": "Signal Strength (RSSI)",
+      "dataKey": "rssi",
       "addressType": "Register",
       "address": "1000",
       "minValue": -150,
       "maxValue": 0,
+      "defaultValue": 0,
       "units": "dBm",
       "dataType": "Word",
       "multiplier": 1,
       "rw": "r",
-      "reportInterval": 3600
+      "reportInterval": 3600,
+      "decodeLength": 1
     },
     {
       "name": "Frequency",
-      "influxName": "chan",
+      "category": "Communication",
+      "description": "Channel Frequency",
+      "dataKey": "chan",
       "addressType": "Register",
       "address": "1001",
       "minValue": 0,
       "maxValue": 1000000,
+      "defaultValue": 0,
       "units": "kHz",
       "dataType": "Word",
       "multiplier": 0.0001,
       "rw": "r",
-      "reportInterval": 3600
+      "reportInterval": 3600,
+      "decodeLength": 1
+    }
+  ],
+  "commands": [
+    {
+      "name": "Set Reporting Interval",
+      "description": "Set the reporting interval for the sensor",
+      "topic": "/devices/milesight/em300-mld/commands",
+      "payloadTemplate": {
+        "devEui": "{{devEui}}",
+        "registerAddress": "FF03",
+        "value": "{{interval}}"
+      },
+      "encoding": "Hex"
     }
   ]
 }

@@ -11,7 +11,7 @@
   "registers": [
     {
       "name": "Panel Voltage",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Coil",
       "address": "1103",
       "minValue": 0,
@@ -23,7 +23,7 @@
     },
     {
       "name": "Panel Current",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Coil",
       "address": "1104",
       "minValue": 0,
@@ -35,7 +35,7 @@
     },
     {
       "name": "Device Address",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Register",
       "address": "2002",
       "minValue": 0,
@@ -47,7 +47,7 @@
     },
     {
       "name": "Comm Rate",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Register",
       "address": "2003",
       "minValue": 0,

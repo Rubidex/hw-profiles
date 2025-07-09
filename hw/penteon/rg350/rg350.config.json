@@ -11,7 +11,7 @@
   "registers": [
     {
       "name": "Value 0",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Register",
       "address": "1100",
       "minValue": 0,
@@ -23,7 +23,7 @@
     },
     {
       "name": "Value 1",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Register",
       "address": "1101",
       "minValue": 0,
@@ -35,7 +35,7 @@
     },
     {
       "name": "Value 2",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Register",
       "address": "1102",
       "minValue": 0,
@@ -47,7 +47,7 @@
     },
     {
       "name": "Value 3",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Register",
       "address": "1103",
       "minValue": 0,
@@ -59,7 +59,7 @@
     },
     {
       "name": "Device Address",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Register",
       "address": "2002",
       "minValue": 0,
@@ -71,7 +71,7 @@
     },
     {
       "name": "Comm Rate",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Register",
       "address": "2003",
       "minValue": 0,

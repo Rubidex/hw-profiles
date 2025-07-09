@@ -11,7 +11,7 @@
   "registers": [
     {
       "name": "Current CT1",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Register",
       "address": "1101",
       "minValue": 0,
@@ -23,7 +23,7 @@
     },
     {
       "name": "Current CT2",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Register",
       "address": "1102",
       "minValue": 0,
@@ -35,7 +35,7 @@
     },
     {
       "name": "Current CT3",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Register",
       "address": "1103",
       "minValue": 0,
@@ -47,7 +47,7 @@
     },
     {
       "name": "Current CT4",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Register",
       "address": "1104",
       "minValue": 0,
@@ -59,7 +59,7 @@
     },
     {
       "name": "Current CT5",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Register",
       "address": "1105",
       "minValue": 0,
@@ -71,7 +71,7 @@
     },
     {
       "name": "Current CT6",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Register",
       "address": "1106",
       "minValue": 0,
@@ -83,7 +83,7 @@
     },
     {
       "name": "Current CT7",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Register",
       "address": "1107",
       "minValue": 0,
@@ -95,7 +95,7 @@
     },
     {
       "name": "Current CT8",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Register",
       "address": "1108",
       "minValue": 0,
@@ -107,7 +107,7 @@
     },
     {
       "name": "Current CT9",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Register",
       "address": "1109",
       "minValue": 0,
@@ -119,7 +119,7 @@
     },
     {
       "name": "Current CT10",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Register",
       "address": "110a",
       "minValue": 0,
@@ -131,7 +131,7 @@
     },
     {
       "name": "Current CT11",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Register",
       "address": "110b",
       "minValue": 0,
@@ -143,7 +143,7 @@
     },
     {
       "name": "Current CT12",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Register",
       "address": "110c",
       "minValue": 0,
@@ -155,7 +155,7 @@
     },
     {
       "name": "Current CT13",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Register",
       "address": "110d",
       "minValue": 0,
@@ -167,7 +167,7 @@
     },
     {
       "name": "Current CT14",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Register",
       "address": "110e",
       "minValue": 0,
@@ -179,7 +179,7 @@
     },
     {
       "name": "Current CT15",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Register",
       "address": "110f",
       "minValue": 0,
@@ -191,7 +191,7 @@
     },
     {
       "name": "Current CT16",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Register",
       "address": "1110",
       "minValue": 0,
@@ -203,7 +203,7 @@
     },
     {
       "name": "Current CT17",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Register",
       "address": "1111",
       "minValue": 0,
@@ -215,7 +215,7 @@
     },
     {
       "name": "Current CT18",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Register",
       "address": "1112",
       "minValue": 0,
@@ -227,7 +227,7 @@
     },
     {
       "name": "Energy CT1",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Register",
       "address": "1113",
       "minValue": 0,
@@ -239,7 +239,7 @@
     },
     {
       "name": "Energy CT2",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Register",
       "address": "1114",
       "minValue": 0,
@@ -251,7 +251,7 @@
     },
     {
       "name": "Energy CT3",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Register",
       "address": "1115",
       "minValue": 0,
@@ -263,7 +263,7 @@
     },
     {
       "name": "Energy CT4",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Register",
       "address": "1116",
       "minValue": 0,
@@ -275,7 +275,7 @@
     },
     {
       "name": "Energy CT5",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Register",
       "address": "1117",
       "minValue": 0,
@@ -287,7 +287,7 @@
     },
     {
       "name": "Energy CT6",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Register",
       "address": "1118",
       "minValue": 0,
@@ -299,7 +299,7 @@
     },
     {
       "name": "Energy CT7",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Register",
       "address": "1119",
       "minValue": 0,
@@ -311,7 +311,7 @@
     },
     {
       "name": "Energy CT8",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Register",
       "address": "111a",
       "minValue": 0,
@@ -323,7 +323,7 @@
     },
     {
       "name": "Energy CT9",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Register",
       "address": "111b",
       "minValue": 0,
@@ -335,7 +335,7 @@
     },
     {
       "name": "Energy CT10",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Register",
       "address": "111c",
       "minValue": 0,
@@ -347,7 +347,7 @@
     },
     {
       "name": "Energy CT11",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Register",
       "address": "111d",
       "minValue": 0,
@@ -359,7 +359,7 @@
     },
     {
       "name": "Energy CT12",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Register",
       "address": "111e",
       "minValue": 0,
@@ -371,7 +371,7 @@
     },
     {
       "name": "Energy CT13",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Register",
       "address": "111f",
       "minValue": 0,
@@ -383,7 +383,7 @@
     },
     {
       "name": "Energy CT14",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Register",
       "address": "1120",
       "minValue": 0,
@@ -395,7 +395,7 @@
     },
     {
       "name": "Energy CT15",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Register",
       "address": "1121",
       "minValue": 0,
@@ -407,7 +407,7 @@
     },
     {
       "name": "Energy CT16",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Register",
       "address": "1122",
       "minValue": 0,
@@ -419,7 +419,7 @@
     },
     {
       "name": "Energy CT17",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Register",
       "address": "1123",
       "minValue": 0,
@@ -431,7 +431,7 @@
     },
     {
       "name": "Energy CT18",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Register",
       "address": "1124",
       "minValue": 0,
@@ -443,7 +443,7 @@
     },
     {
       "name": "Total Energy All CTs",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Register",
       "address": "1125",
       "minValue": 0,
@@ -456,7 +456,7 @@
 
     {
       "name": "Power Factor",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Register",
       "address": "2000",
       "minValue": 0,
@@ -468,7 +468,7 @@
     },
     {
       "name": "Voltage",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Register",
       "address": "2001",
       "minValue": 0,
@@ -480,7 +480,7 @@
     },
     {
       "name": "Device Address",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Register",
       "address": "2002",
       "minValue": 0,
@@ -492,7 +492,7 @@
     },
     {
       "name": "BaudRate",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Register",
       "address": "2003",
       "minValue": 0,

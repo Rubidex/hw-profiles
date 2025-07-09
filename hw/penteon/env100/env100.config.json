@@ -5,8 +5,6 @@
     "make": "Env100 Series",
     "model": "env100-v1.0",
     "sku": "Env100-Mar2024",
-    "document_version": 1.1,
-    "document_timestamp": 1713219896,
     "type": "Indoor Environmental Air Quality Sensor",
     "communicationProtocol": "Modbus"
   },
@@ -14,7 +12,7 @@
   "registers": [
     {
       "name": "Temperature",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Coil",
       "address": "1101",
       "minValue": -8000,
@@ -27,7 +25,7 @@
     },
     {
       "name": "Humidity",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Coil",
       "address": "1102",
       "minValue": 0,
@@ -40,7 +38,7 @@
     },
     {
       "name": "CO2",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Coil",
       "address": "1103",
       "minValue": 400,
@@ -53,7 +51,7 @@
     },
     {
       "name": "Particulates PM1",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Coil",
       "address": "1104",
       "minValue": 0,
@@ -66,7 +64,7 @@
     },
     {
       "name": "Particulates PM2.5",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Coil",
       "address": "1105",
       "minValue": 0,
@@ -78,7 +76,7 @@
     },
     {
       "name": "Particulates PM4",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Coil",
       "address": "1106",
       "minValue": 0,
@@ -91,7 +89,7 @@
     },
     {
       "name": "Particulates PM10",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Coil",
       "address": "1107",
       "minValue": 0,
@@ -103,8 +101,8 @@
       "rw": "r"
     },
     {
-      "name": "Volatitile Organic Compounds",
-      "influxName": "value2",
+      "name": "Volatile Organic Compounds",
+      "dataKey": "value2",
       "addressType": "Coil",
       "address": "1108",
       "minValue": 0,
@@ -117,7 +115,7 @@
     },
     {
       "name": "Nitrous Oxide Gases",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Coil",
       "address": "1109",
       "minValue": 0,
@@ -130,7 +128,7 @@
     },
     {
       "name": "Differential Pressure",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Coil",
       "address": "110a",
       "minValue": -5000,
@@ -144,7 +142,7 @@
 
     {
       "name": "Modbus Address",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Register",
       "address": "2002",
       "minValue": 0,
@@ -157,7 +155,7 @@
     },
     {
       "name": "BaudRate",
-      "influxName": "value2",
+      "dataKey": "value2",
       "addressType": "Register",
       "address": "2003",
       "minValue": 0,
