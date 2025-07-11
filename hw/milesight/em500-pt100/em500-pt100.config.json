@@ -1,5 +1,6 @@
 {
   "meta": {
+    "version": "1.0",
     "device": "Sensor",
     "manufacturer": "Milesight",
     "make": "EM500 Series",
@@ -27,68 +28,72 @@
       "category": "Power",
       "description": "Battery Level in %",
       "dataKey": "battery",
-      "addressType": "Register",
-      "address": "0175",
       "minValue": 0,
       "maxValue": 100,
-      "defaultValue": 0,
       "units": "%",
+      "address": "0175",
       "rw": "r",
       "reportInterval": 3600,
-      "decodeLength": 1,
-      "multiplier": 1,
-      "dataType": "Word"
+      "decode": {
+        "length": 1,
+        "multiplier": 1,
+        "dataType": "Word",
+        "addressType": "Register"
+      }
     },
     {
       "name": "Temperature",
       "category": "Measurement",
       "description": "Temperature in ℃",
       "dataKey": "temperature",
-      "addressType": "Register",
-      "address": "0367",
       "minValue": -40,
       "maxValue": 125,
-      "defaultValue": 0,
       "units": "°C",
+      "address": "0367",
       "rw": "r",
       "reportInterval": 3600,
-      "decodeLength": 2,
-      "multiplier": 0.1,
-      "dataType": "Word"
+      "decode": {
+        "length": 2,
+        "multiplier": 0.1,
+        "dataType": "Word",
+        "addressType": "Register"
+      }
     },
     {
       "name": "Temperature Alarm",
       "category": "Alarm",
       "description": "Temperature Alarm",
       "dataKey": "temperature_alarm",
-      "addressType": "Register",
-      "address": "83D7",
       "minValue": -40,
       "maxValue": 125,
-      "defaultValue": 0,
       "units": "°C",
+      "address": "83D7",
       "rw": "r",
       "reportInterval": 3600,
-      "decodeLength": 5,
-      "multiplier": 1,
-      "dataType": "Word"
+      "decode": {
+        "length": 5,
+        "multiplier": 1,
+        "dataType": "Word",
+        "addressType": "Register"
+      }
     },
     {
       "name": "Historical Data",
       "category": "Measurement",
       "description": "Historical Temperature Data",
-      "dataKey": "historical_temperature",
-      "addressType": "Register",
-      "address": "20CE",
       "minValue": -40,
       "maxValue": 125,
-      "defaultValue": 0,
       "units": "°C",
+      "dataKey": "historical_temperature",
+      "address": "20CE",
       "rw": "r",
       "reportInterval": 3600,
-      "decodeLength": 6,
-      "multiplier": 1,
-      "dataType": "Word"
+      "decode": {
+        "length": 6,
+        "multiplier": 1,
+        "dataType": "Word",
+        "addressType": "Register"
+      }
     }
   ]
 }

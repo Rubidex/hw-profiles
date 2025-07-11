@@ -26,7 +26,7 @@
     {
       "name": "Battery",
       "category": "Power",
-      "description": "Battery  Level in %",
+      "description": "Battery Level in %",
       "dataKey": "battery",
       "addressType": "Register",
       "address": "0175",
@@ -34,11 +34,12 @@
       "maxValue": 100,
       "defaultValue": 0,
       "units": "%",
-      "dataType": "Word",
-      "multiplier": 1,
       "rw": "r",
       "reportInterval": 21600,
-      "decodeLength": 1
+      "decode": {
+        "length": 1,
+        "dataType": "Word"
+      }
     },
     {
       "name": "Temperature",
@@ -51,11 +52,13 @@
       "maxValue": 100,
       "defaultValue": 0,
       "units": "°C",
-      "dataType": "Word",
-      "multiplier": 0.1,
       "rw": "r",
       "reportInterval": 3600,
-      "decodeLength": 2
+      "decode": {
+        "length": 2,
+        "dataType": "Word",
+        "multiplier": 0.1
+      }
     },
     {
       "name": "Humidity",
@@ -68,11 +71,12 @@
       "maxValue": 100,
       "defaultValue": 0,
       "units": "%",
-      "dataType": "Word",
-      "multiplier": 1,
       "rw": "r",
       "reportInterval": 3600,
-      "decodeLength": 1
+      "decode": {
+        "length": 1,
+        "dataType": "Word"
+      }
     },
     {
       "name": "Door Status",
@@ -89,11 +93,13 @@
         "0": "Closed",
         "1": "Open"
       },
-      "dataType": "Word",
-      "multiplier": 1,
       "rw": "r",
       "reportInterval": 3600,
-      "decodeLength": 1
+      "decode": {
+        "length": 1,
+        "dataType": "Word",
+        "multiplier": 1
+      }
     },
     {
       "name": "Signal Strength",
@@ -106,11 +112,12 @@
       "maxValue": 0,
       "defaultValue": 0,
       "units": "dbm",
-      "dataType": "Word",
-      "multiplier": 1,
       "rw": "r",
       "reportInterval": 3600,
-      "decodeLength": 1
+      "decode": {
+        "length": 1,
+        "dataType": "Word"
+      }
     },
     {
       "name": "Frequency",
@@ -123,11 +130,13 @@
       "maxValue": 1000000,
       "defaultValue": 0,
       "units": "hz",
-      "dataType": "Word",
-      "multiplier": 0.0001,
       "rw": "r",
       "reportInterval": 3600,
-      "decodeLength": 1
+      "decode": {
+        "length": 1,
+        "dataType": "Word",
+        "multiplier": 0.0001
+      }
     }
   ],
   "commands": [

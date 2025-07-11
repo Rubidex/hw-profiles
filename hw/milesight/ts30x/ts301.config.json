@@ -25,157 +25,202 @@
   "registers": [
     {
       "name": "Battery",
+      "category": "Power",
+      "description": "Battery Level in %",
       "dataKey": "battery",
-      "addressType": "Register",
       "address": "0175",
+      "addressType": "Register",
       "minValue": 0,
       "maxValue": 100,
+      "defaultValue": 0,
       "units": "%",
-      "dataType": "Word",
-      "multiplier": 1,
-      "rw": "r",
+      "rw": "rw",
       "reportInterval": 3600,
-      "decodeLength": 1
+      "decode": {
+        "length": 1,
+        "dataType": "Word",
+        "multiplier": 1
+      }
     },
     {
       "name": "Temperature_ch1",
+      "category": "Measurement",
+      "description": "Temperature channel 1 in °C",
       "dataKey": "temp",
-      "addressType": "Register",
       "address": "0367",
+      "addressType": "Register",
       "minValue": -20,
       "maxValue": 100,
       "units": "°C",
-      "dataType": "Word",
-      "multiplier": 0.1,
-      "rw": "r",
+      "rw": "rw",
       "reportInterval": 3600,
-      "decodeLength": 2
+      "decode": {
+        "length": 2,
+        "dataType": "Word",
+        "multiplier": 0.1
+      }
     },
     {
       "name": "Magnet_ch1",
+      "category": "Status",
+      "description": "Magnet sensor channel 1",
       "dataKey": "magnet_ch1",
-      "addressType": "Register",
       "address": "0300",
+      "addressType": "Register",
       "minValue": 0,
       "maxValue": 1,
       "units": "#",
-      "dataType": "Word",
-      "multiplier": 1,
-      "rw": "r",
+      "rw": "rw",
       "reportInterval": 3600,
-      "decodeLength": 1
+      "decode": {
+        "length": 1,
+        "dataType": "Word",
+        "multiplier": 1
+      }
     },
     {
       "name": "Temperature_ch2",
+      "category": "Measurement",
+      "description": "Temperature channel 2 in °C",
       "dataKey": "temp_ch2",
-      "addressType": "Register",
       "address": "0467",
+      "addressType": "Register",
       "minValue": -20,
       "maxValue": 100,
       "units": "°C",
-      "dataType": "Word",
-      "multiplier": 0.1,
-      "rw": "r",
+      "rw": "rw",
       "reportInterval": 3600,
-      "decodeLength": 2
+      "decode": {
+        "length": 2,
+        "dataType": "Word",
+        "multiplier": 0.1
+      }
     },
     {
       "name": "Magnet_ch2",
+      "category": "Status",
+      "description": "Magnet sensor channel 2",
       "dataKey": "magnet_ch2",
-      "addressType": "Register",
       "address": "0400",
+      "addressType": "Register",
       "minValue": 0,
       "maxValue": 1,
       "units": "#",
-      "dataType": "Word",
-      "multiplier": 1,
-      "rw": "r",
+      "rw": "rw",
       "reportInterval": 3600,
-      "decodeLength": 1
+      "decode": {
+        "length": 1,
+        "dataType": "Word",
+        "multiplier": 1
+      }
     },
     {
       "name": "TempAlarm_ch1",
+      "category": "Alarm",
+      "description": "Temperature Alarm channel 1",
       "dataKey": "temp_alarm_ch1",
-      "addressType": "Register",
       "address": "8367",
+      "addressType": "Register",
       "minValue": 0,
       "maxValue": 3,
       "units": "#",
-      "dataType": "Word",
-      "multiplier": 1,
-      "rw": "r",
+      "rw": "rw",
       "reportInterval": 3600,
-      "decodeLength": 3
+      "decode": {
+        "length": 3,
+        "dataType": "Word",
+        "multiplier": 1
+      }
     },
     {
       "name": "TempAlarm_ch1-Type2",
+      "category": "Alarm",
+      "description": "Temperature Alarm channel 1 Type 2",
       "dataKey": "temp_alarm_ch2_t2",
-      "addressType": "Register",
       "address": "93d7",
+      "addressType": "Register",
       "minValue": 0,
       "maxValue": 3,
       "units": "#",
-      "dataType": "Word",
-      "multiplier": 1,
-      "rw": "r",
+      "rw": "rw",
       "reportInterval": 3600,
-      "decodeLength": 5
+      "decode": {
+        "length": 5,
+        "dataType": "Word",
+        "multiplier": 1
+      }
     },
     {
       "name": "TempAlarm_ch2",
+      "category": "Alarm",
+      "description": "Temperature Alarm channel 2",
       "dataKey": "temp_alarm_ch2",
-      "addressType": "Register",
       "address": "8467",
+      "addressType": "Register",
       "minValue": 0,
       "maxValue": 3,
       "units": "#",
-      "dataType": "Word",
-      "multiplier": 1,
-      "rw": "r",
+      "rw": "rw",
       "reportInterval": 3600,
-      "decodeLength": 3
+      "decode": {
+        "length": 3,
+        "dataType": "Word",
+        "multiplier": 1
+      }
     },
     {
       "name": "TempAlarm_ch2_type2",
+      "category": "Alarm",
+      "description": "Temperature Alarm channel 2 Type 2",
       "dataKey": "temp_alarm_ch2_t2",
-      "addressType": "Register",
       "address": "94d7",
+      "addressType": "Register",
       "minValue": 0,
       "maxValue": 3,
       "units": "#",
-      "dataType": "Word",
-      "multiplier": 1,
-      "rw": "r",
+      "rw": "rw",
       "reportInterval": 3600,
-      "decodeLength": 5
+      "decode": {
+        "length": 5,
+        "dataType": "Word",
+        "multiplier": 1
+      }
     },
     {
       "name": "Signal Strength",
+      "category": "Communication",
+      "description": "Signal strength RSSI",
       "dataKey": "rssi",
-      "addressType": "Register",
       "address": "1000",
+      "addressType": "Register",
       "minValue": -150,
       "maxValue": 0,
       "units": "dBm",
-      "dataType": "Word",
-      "multiplier": 1,
-      "rw": "r",
+      "rw": "rw",
       "reportInterval": 3600,
-      "decodeLength": 1
+      "decode": {
+        "length": 1,
+        "dataType": "Word",
+        "multiplier": 1
+      }
     },
     {
       "name": "Frequency",
+      "category": "Communication",
+      "description": "Frequency channel",
       "dataKey": "chan",
-      "addressType": "Register",
       "address": "1001",
+      "addressType": "Register",
       "minValue": 0,
       "maxValue": 100000,
       "units": "KHz",
-      "dataType": "Word",
-      "multiplier": 0.0001,
-      "rw": "r",
+      "rw": "rw",
       "reportInterval": 3600,
-      "decodeLength": 1
+      "decode": {
+        "length": 1,
+        "dataType": "Word",
+        "multiplier": 0.0001
+      }
     }
   ],
   "commands": [

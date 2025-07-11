@@ -37,9 +37,11 @@
       "units": "%",
       "rw": "rw",
       "reportInterval": 3600,
-      "decodeLength": 1,
-      "multiplier": 1,
-      "dataType": "Word"
+      "decode": {
+        "length": 1,
+        "dataType": "Word",
+        "multiplier": 1
+      }
     },
     {
       "name": "Water Level",
@@ -54,9 +56,11 @@
       "units": "cm",
       "rw": "rw",
       "reportInterval": 3600,
-      "multiplier": 1,
-      "decodeLength": 2,
-      "dataType": "Word"
+      "decode": {
+        "length": 2,
+        "dataType": "Word",
+        "multiplier": 1
+      }
     }
   ],
   "commands": [

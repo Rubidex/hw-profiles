@@ -4,93 +4,91 @@
     "device": "Sensor",
     "manufacturer": "Milesight",
     "make": "EM300 Series",
-    "model": "EM300-MLD",
-    "sku": "EM300-MLD",
-    "type": "Leak Detection",
-    "communicationProtocol": "MQTT",
-    "description": "Configuration for the EM300-MLD leak detection sensor."
-  },
-  "json": {
-    "topic": "/devices/em300",
-    "payloadField": "data",
-    "deviceIdField": "devEUI",
-    "timestampField": "time",
-    "keys": [
-      { "name": "gatewayId", "path": "rxInfo.gatewayID" },
-      { "name": "rssi", "path": "rxInfo.rssi" },
-      { "name": "fCnt", "path": "fCnt" }
-    ],
-    "payloadEncoding": "Base64",
-    "payloadFormat": "tagValue"
+    "model": "EM300-TH",
+    "sku": "",
+    "type": "Thermostat",
+    "communicationProtocol": "LoRaWAN"
   },
   "registers": [
     {
-      "name": "Battery",
-      "category": "Power",
-      "description": "Battery Level in %",
-      "dataKey": "battery",
-      "addressType": "Register",
-      "address": "0175",
-      "minValue": 0,
-      "maxValue": 100,
-      "defaultValue": 0,
-      "units": "%",
-      "dataType": "Word",
-      "multiplier": 1,
-      "rw": "r",
-      "reportInterval": 21600,
-      "decodeLength": 1
-    },
-    {
-      "name": "Leak Status",
-      "category": "Status",
-      "description": "Leak detected (0=No Leak, 1=Leak)",
-      "dataKey": "asset_state",
-      "addressType": "Register",
-      "address": "0600",
-      "minValue": 0,
-      "maxValue": 1,
-      "defaultValue": 0,
-      "units": "",
-      "dataType": "Word",
-      "multiplier": 1,
-      "rw": "r",
-      "reportInterval": 3600,
-      "decodeLength": 1
-    },
-    {
       "name": "Signal Strength",
-      "category": "Communication",
-      "description": "Signal Strength (RSSI)",
       "dataKey": "rssi",
-      "addressType": "Register",
-      "address": "1000",
       "minValue": -150,
       "maxValue": 0,
-      "defaultValue": 0,
-      "units": "dBm",
-      "dataType": "Word",
-      "multiplier": 1,
+      "units": "dbm",
+      "address": "1000",
       "rw": "r",
       "reportInterval": 3600,
-      "decodeLength": 1
+      "decode": {
+        "dataType": "Word",
+        "multiplier": 1,
+        "length": 1,
+        "addressType": "Register"
+      }
     },
     {
       "name": "Frequency",
-      "category": "Communication",
-      "description": "Channel Frequency",
       "dataKey": "chan",
-      "addressType": "Register",
       "address": "1001",
+      "units": "hz",
       "minValue": 0,
-      "maxValue": 1000000,
-      "defaultValue": 0,
-      "units": "kHz",
-      "dataType": "Word",
-      "multiplier": 0.0001,
+      "maxValue": 100000,
       "rw": "r",
       "reportInterval": 3600,
-      "decodeLength": 1
+      "decode": {
+        "dataType": "Word",
+        "multiplier": 0.01,
+        "length": 1,
+        "addressType": "Register"
+      }
+    },
+    {
+      "name": "Battery",
+      "dataKey": "battery",
+      "address": "0175",
+      "minValue": 0,
+      "maxValue": 100,
+      "units": "%",
+      "rw": "r",
+      "reportInterval": 21600,
+      "decode": {
+        "dataType": "Word",
+        "multiplier": 1,
+        "length": 1,
+        "addressType": "Register"
+      }
+    },
+    {
+      "name": "Temperature",
+      "dataKey": "temp",
+      "address": "0467",
+      "minValue": -20,
+      "maxValue": 50,
+      "units": "°C/°F",
+      "rw": "r",
+      "reportInterval": 3600,
+      "decode": {
+        "dataType": "Word",
+        "multiplier": 1,
+        "length": 1,
+        "addressType": "Register"
+      }
+    },
+    {
+      "name": "Humidity",
+      "dataKey": "humidity",
+      "address": "0468",
+      "minValue": 0,
+      "maxValue": 100,
+      "units": "%",
+      "rw": "r",
+      "reportInterval": 3600,
+      "decode": {
+        "dataType": "Word",
+        "multiplier": 1,
+        "length": 1,
+        "addressType": "Register"
+      }
     }
   ],
   "commands": [

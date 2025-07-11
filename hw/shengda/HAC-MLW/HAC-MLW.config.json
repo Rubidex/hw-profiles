@@ -12,119 +12,151 @@
     {
       "name": "Pulse Count",
       "dataKey": "pCnt",
-      "addressType": "Register",
+      "units": "#",
       "address": "0b",
       "minValue": 0,
       "maxValue": "FFFFFFFF",
-      "units": "#",
-      "dataType": "Word",
-      "multiplier": 1,
+      "description": "Number of pulse",
       "rw": "rw",
-      "reportInterval": 86400
+      "reportInterval": 86400,
+      "decode": {
+        "length": 4,
+        "dataType": "Integer"
+      }
     },
     {
       "name": "Meter Mode",
       "dataKey": "Mode",
-      "addressType": "Register",
+      "units": "#",
       "address": "12",
       "minValue": 0,
       "maxValue": "FF",
-      "units": "#",
-      "dataType": "Word",
-      "multiplier": 1,
+      "description": "Metering Mode",
       "rw": "rw",
-      "reportInterval": 86400
+      "reportInterval": 86400,
+      "decode": {
+        "length": 1,
+        "dataType": "Integer"
+      }
     },
     {
       "name": "Pulse Constant",
       "dataKey": "Constant",
-      "addressType": "Register",
+      "units": "#",
       "address": "14",
       "minValue": 0,
       "maxValue": "FF",
-      "units": "#",
-      "dataType": "Word",
-      "multiplier": 1,
+      "description": "Pulse Constant",
       "rw": "rw",
-      "reportInterval": 86400
+      "reportInterval": 86400,
+      "decode": {
+        "length": 1,
+        "dataType": "Integer"
+      }
     },
     {
       "name": "MeterID",
       "dataKey": "MeterID",
-      "addressType": "Register",
+      "units": "#",
       "address": "16",
       "minValue": 0,
       "maxValue": "FFFFFFFF",
-      "units": "#",
-      "dataType": "Word",
-      "multiplier": 1,
+      "description": "MeterID",
       "rw": "rw",
-      "reportInterval": 86400
+      "reportInterval": 86400,
+      "decode": {
+        "length": 4,
+        "dataType": "Integer"
+      }
     },
     {
       "name": "PacketSequence",
       "dataKey": "fCnt",
-      "addressType": "Register",
+      "units": "#",
       "address": "19",
       "minValue": 0,
       "maxValue": "FF",
-      "units": "#",
-      "dataType": "Word",
-      "multiplier": 1,
+      "description": "Packet sequence count",
       "rw": "r",
       "reportInterval": 86400
     },
     {
       "name": "Battery Voltage",
       "dataKey": "Battery",
-      "addressType": "Register",
+      "units": "#",
       "address": "1a",
       "minValue": 0,
       "maxValue": "FFFF",
-      "units": "#",
-      "dataType": "Word",
-      "multiplier": 1,
+      "description": "Battery Level",
       "rw": "r",
-      "reportInterval": 86400
+      "reportInterval": 86400,
+      "decode": {
+        "length": 2,
+        "dataType": "Integer"
+      }
     },
     {
       "name": "Meter Type",
       "dataKey": "Type",
-      "addressType": "Register",
+      "units": "#",
       "address": "1b",
       "minValue": 0,
       "maxValue": "FF",
-      "units": "#",
-      "dataType": "Word",
-      "multiplier": 1,
+      "description": "Meter Type",
       "rw": "r",
-      "reportInterval": 86400
+      "reportInterval": 86400,
+      "decode": {
+        "length": 1,
+        "dataType": "Integer"
+      }
     },
     {
       "name": "Trigger Source",
       "dataKey": "Trigger",
-      "addressType": "Register",
+      "units": "#",
       "address": "23",
       "minValue": 0,
       "maxValue": "FF",
-      "units": "#",
-      "dataType": "Word",
-      "multiplier": 1,
-      "rW": "r",
-      "reportInterval": 86400
+      "description": "Trigger Source",
+      "rw": "r",
+      "reportInterval": 86400,
+      "decode": {
+        "length": 1,
+        "dataType": "Integer"
+      }
     },
     {
       "name": "Device Status",
       "dataKey": "Status",
-      "addressType": "Register",
+      "units": "#",
       "address": "33",
       "minValue": 0,
       "maxValue": "FFFF",
-      "units": "#",
-      "dataType": "Word",
-      "multiplier": 1,
+      "description": "Device status bitmap",
       "rw": "r",
-      "reportInterval": 86400
+      "reportInterval": 86400,
+      "decode": {
+        "length": 1,
+        "dataType": "Bitmap",
+        "bitLabels": [
+          "Reserve",
+          "Meter Failure",
+          "Valve Status",
+          "DER",
+          "Battery Power Off",
+          "Magnetic Attack",
+          "Battery Status",
+          "Valve Fault",
+          "Remote Flag",
+          "Historical magnetic attack",
+          "Tube Burst",
+          "Leakage",
+          "Meter Status",
+          "Flow Alarm",
+          "Water Return Alarm",
+          "Water Inlet Alarm"
+        ]
+      }
     }
   ]
 }

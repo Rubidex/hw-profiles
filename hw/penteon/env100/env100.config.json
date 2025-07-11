@@ -8,7 +8,6 @@
     "type": "Indoor Environmental Air Quality Sensor",
     "communicationProtocol": "Modbus"
   },
-
   "registers": [
     {
       "name": "Temperature",
@@ -17,11 +16,14 @@
       "address": "1101",
       "minValue": -8000,
       "maxValue": 8000,
-      "default_value": 0,
+      "defaultValue": 0,
       "units": "°C",
-      "dataType": "Word",
-      "multiplier": 0.01,
-      "rw": "r"
+      "rw": "r",
+      "decode": {
+        "length": 2,
+        "dataType": "Word",
+        "multiplier": 0.01
+      }
     },
     {
       "name": "Humidity",
@@ -30,11 +32,14 @@
       "address": "1102",
       "minValue": 0,
       "maxValue": 10000,
-      "default_value": 0,
+      "defaultValue": 0,
       "units": "%RH",
-      "dataType": "Word",
-      "multiplier": 0.01,
-      "rw": "r"
+      "rw": "r",
+      "decode": {
+        "length": 2,
+        "dataType": "Word",
+        "multiplier": 0.01
+      }
     },
     {
       "name": "CO2",
@@ -43,11 +48,14 @@
       "address": "1103",
       "minValue": 400,
       "maxValue": 2000,
-      "default_value": 0,
+      "defaultValue": 0,
       "units": "ppm",
-      "dataType": "Word",
-      "multiplier": 1,
-      "rw": "r"
+      "rw": "r",
+      "decode": {
+        "length": 2,
+        "dataType": "Word",
+        "multiplier": 1
+      }
     },
     {
       "name": "Particulates PM1",
@@ -56,11 +64,14 @@
       "address": "1104",
       "minValue": 0,
       "maxValue": 10000,
-      "default_value": 0,
+      "defaultValue": 0,
       "units": "ppm",
-      "dataType": "Word",
-      "multiplier": 0.01,
-      "rw": "r"
+      "rw": "r",
+      "decode": {
+        "length": 2,
+        "dataType": "Word",
+        "multiplier": 0.01
+      }
     },
     {
       "name": "Particulates PM2.5",
@@ -70,9 +81,12 @@
       "minValue": 0,
       "maxValue": 10000,
       "units": "ppm",
-      "dataType": "Word",
-      "multiplier": 0.01,
-      "rw": "r"
+      "rw": "r",
+      "decode": {
+        "length": 2,
+        "dataType": "Word",
+        "multiplier": 0.01
+      }
     },
     {
       "name": "Particulates PM4",
@@ -81,11 +95,14 @@
       "address": "1106",
       "minValue": 0,
       "maxValue": 10000,
-      "default_value": 0,
-      "units": "pp",
-      "dataType": "Word",
-      "multiplier": 0.01,
-      "rw": "r"
+      "defaultValue": 0,
+      "units": "ppm",
+      "rw": "r",
+      "decode": {
+        "length": 2,
+        "dataType": "Word",
+        "multiplier": 0.01
+      }
     },
     {
       "name": "Particulates PM10",
@@ -94,11 +111,14 @@
       "address": "1107",
       "minValue": 0,
       "maxValue": 10000,
-      "default_value": 0,
+      "defaultValue": 0,
       "units": "ppm",
-      "dataType": "Word",
-      "multiplier": 0.01,
-      "rw": "r"
+      "rw": "r",
+      "decode": {
+        "length": 2,
+        "dataType": "Word",
+        "multiplier": 0.01
+      }
     },
     {
       "name": "Volatile Organic Compounds",
@@ -107,11 +127,14 @@
       "address": "1108",
       "minValue": 0,
       "maxValue": 10000,
-      "default_value": 0,
+      "defaultValue": 0,
       "units": "ppm",
-      "dataType": "Word",
-      "multiplier": 1,
-      "rw": "r"
+      "rw": "r",
+      "decode": {
+        "length": 2,
+        "dataType": "Word",
+        "multiplier": 1
+      }
     },
     {
       "name": "Nitrous Oxide Gases",
@@ -120,11 +143,14 @@
       "address": "1109",
       "minValue": 0,
       "maxValue": 10000,
-      "default_value": 0,
+      "defaultValue": 0,
       "units": "ppm",
-      "dataType": "Word",
-      "multiplier": 1,
-      "rw": "r"
+      "rw": "r",
+      "decode": {
+        "length": 2,
+        "dataType": "Word",
+        "multiplier": 1
+      }
     },
     {
       "name": "Differential Pressure",
@@ -133,25 +159,30 @@
       "address": "110a",
       "minValue": -5000,
       "maxValue": 5000,
-      "default_value": 0,
+      "defaultValue": 0,
       "units": "kPa",
-      "dataType": "Word",
-      "multiplier": 1,
-      "rw": "r"
+      "rw": "r",
+      "decode": {
+        "length": 2,
+        "dataType": "Word",
+        "multiplier": 1
+      }
     },
-
     {
       "name": "Modbus Address",
       "dataKey": "value2",
       "addressType": "Register",
       "address": "2002",
       "minValue": 0,
-      "maxValue": "FF",
-      "default_value": 50,
+      "maxValue": 255,
+      "defaultValue": 50,
       "units": "addr",
-      "dataType": "Word",
-      "multiplier": 1,
-      "rw": "rw"
+      "rw": "rw",
+      "decode": {
+        "length": 1,
+        "dataType": "Word",
+        "multiplier": 1
+      }
     },
     {
       "name": "BaudRate",
@@ -160,11 +191,14 @@
       "address": "2003",
       "minValue": 0,
       "maxValue": 6,
-      "default_value": 4,
+      "defaultValue": 4,
       "units": "bps",
-      "dataType": "Word",
-      "multiplier": 1,
-      "rw": "rw"
+      "rw": "rw",
+      "decode": {
+        "length": 1,
+        "dataType": "Word",
+        "multiplier": 1
+      }
     }
   ]
 }

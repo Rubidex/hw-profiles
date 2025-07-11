@@ -17,9 +17,12 @@
       "minValue": 0,
       "maxValue": 25,
       "units": "A",
-      "dataType": "Word",
-      "multiplier": 0.001,
-      "rw": "r"
+      "rw": "r",
+      "decode": {
+        "length": 1,
+        "dataType": "Word",
+        "multiplier": 0.001
+      }
     },
     {
       "name": "Current CT2",
@@ -29,9 +32,12 @@
       "minValue": 0,
       "maxValue": 25,
       "units": "A",
-      "dataType": "Word",
-      "multiplier": 0.001,
-      "rw": "r"
+      "rw": "r",
+      "decode": {
+        "length": 1,
+        "dataType": "Word",
+        "multiplier": 0.001
+      }
     },
     {
       "name": "Current CT3",
@@ -41,9 +47,12 @@
       "minValue": 0,
       "maxValue": 25,
       "units": "A",
-      "dataType": "Word",
-      "multiplier": 0.001,
-      "rw": "r"
+      "rw": "r",
+      "decode": {
+        "length": 1,
+        "dataType": "Word",
+        "multiplier": 0.001
+      }
     },
     {
       "name": "Current CT4",
@@ -53,9 +62,12 @@
       "minValue": 0,
       "maxValue": 25,
       "units": "A",
-      "dataType": "Word",
-      "multiplier": 0.001,
-      "rw": "r"
+      "rw": "r",
+      "decode": {
+        "length": 1,
+        "dataType": "Word",
+        "multiplier": 0.001
+      }
     },
     {
       "name": "Current CT5",
@@ -65,9 +77,12 @@
       "minValue": 0,
       "maxValue": 25,
       "units": "A",
-      "dataType": "Word",
-      "multiplier": 0.001,
-      "rw": "r"
+      "rw": "r",
+      "decode": {
+        "length": 1,
+        "dataType": "Word",
+        "multiplier": 0.001
+      }
     },
     {
       "name": "Current CT6",
@@ -77,9 +92,12 @@
       "minValue": 0,
       "maxValue": 25,
       "units": "A",
-      "dataType": "Word",
-      "multiplier": 0.001,
-      "rw": "r"
+      "rw": "r",
+      "decode": {
+        "length": 1,
+        "dataType": "Word",
+        "multiplier": 0.001
+      }
     },
     {
       "name": "Current CT7",
@@ -89,9 +107,12 @@
       "minValue": 0,
       "maxValue": 25,
       "units": "A",
-      "dataType": "Word",
-      "multiplier": 0.001,
-      "rw": "r"
+      "rw": "r",
+      "decode": {
+        "length": 1,
+        "dataType": "Word",
+        "multiplier": 0.001
+      }
     },
     {
       "name": "Current CT8",
@@ -101,9 +122,12 @@
       "minValue": 0,
       "maxValue": 25,
       "units": "A",
-      "dataType": "Word",
-      "multiplier": 0.001,
-      "rw": "r"
+      "rw": "r",
+      "decode": {
+        "length": 1,
+        "dataType": "Word",
+        "multiplier": 0.001
+      }
     },
     {
       "name": "Current CT9",
@@ -113,9 +137,12 @@
       "minValue": 0,
       "maxValue": 25,
       "units": "A",
-      "dataType": "Word",
-      "multiplier": 0.001,
-      "rw": "r"
+      "rw": "r",
+      "decode": {
+        "length": 1,
+        "dataType": "Word",
+        "multiplier": 0.001
+      }
     },
     {
       "name": "Current CT10",
@@ -125,9 +152,12 @@
       "minValue": 0,
       "maxValue": 25,
       "units": "A",
-      "dataType": "Word",
-      "multiplier": 0.001,
-      "rw": "r"
+      "rw": "r",
+      "decode": {
+        "length": 1,
+        "dataType": "Word",
+        "multiplier": 0.001
+      }
     },
     {
       "name": "Current CT11",
@@ -137,9 +167,12 @@
       "minValue": 0,
       "maxValue": 25,
       "units": "A",
-      "dataType": "Word",
-      "multiplier": 0.001,
-      "rw": "r"
+      "rw": "r",
+      "decode": {
+        "length": 1,
+        "dataType": "Word",
+        "multiplier": 0.001
+      }
     },
     {
       "name": "Current CT12",
@@ -149,9 +182,12 @@
       "minValue": 0,
       "maxValue": 25,
       "units": "A",
-      "dataType": "Word",
-      "multiplier": 0.001,
-      "rw": "r"
+      "rw": "r",
+      "decode": {
+        "length": 1,
+        "dataType": "Word",
+        "multiplier": 0.001
+      }
     },
     {
       "name": "Current CT13",
@@ -161,9 +197,12 @@
       "minValue": 0,
       "maxValue": 25,
       "units": "A",
-      "dataType": "Word",
-      "multiplier": 0.001,
-      "rw": "r"
+      "rw": "r",
+      "decode": {
+        "length": 1,
+        "dataType": "Word",
+        "multiplier": 0.001
+      }
     },
     {
       "name": "Current CT14",
@@ -173,9 +212,12 @@
       "minValue": 0,
       "maxValue": 25,
       "units": "A",
-      "dataType": "Word",
-      "multiplier": 0.001,
-      "rw": "r"
+      "rw": "r",
+      "decode": {
+        "length": 1,
+        "dataType": "Word",
+        "multiplier": 0.001
+      }
     },
     {
       "name": "Current CT15",
@@ -185,9 +227,12 @@
       "minValue": 0,
       "maxValue": 25,
       "units": "A",
-      "dataType": "Word",
-      "multiplier": 0.001,
-      "rw": "r"
+      "rw": "r",
+      "decode": {
+        "length": 1,
+        "dataType": "Word",
+        "multiplier": 0.001
+      }
     },
     {
       "name": "Current CT16",
@@ -197,9 +242,12 @@
       "minValue": 0,
       "maxValue": 25,
       "units": "A",
-      "dataType": "Word",
-      "multiplier": 0.001,
-      "rw": "r"
+      "rw": "r",
+      "decode": {
+        "length": 1,
+        "dataType": "Word",
+        "multiplier": 0.001
+      }
     },
     {
       "name": "Current CT17",
@@ -209,9 +257,12 @@
       "minValue": 0,
       "maxValue": 25,
       "units": "A",
-      "dataType": "Word",
-      "multiplier": 0.001,
-      "rw": "r"
+      "rw": "r",
+      "decode": {
+        "length": 1,
+        "dataType": "Word",
+        "multiplier": 0.001
+      }
     },
     {
       "name": "Current CT18",
@@ -221,9 +272,12 @@
       "minValue": 0,
       "maxValue": 25,
       "units": "A",
-      "dataType": "Word",
-      "multiplier": 0.001,
-      "rw": "r"
+      "rw": "r",
+      "decode": {
+        "length": 1,
+        "dataType": "Word",
+        "multiplier": 0.001
+      }
     },
     {
       "name": "Energy CT1",
@@ -233,9 +287,12 @@
       "minValue": 0,
       "maxValue": 999999999,
       "units": "W",
-      "dataType": "DWord",
-      "multiplier": 0.01,
-      "rw": "rw"
+      "rw": "rw",
+      "decode": {
+        "length": 2,
+        "dataType": "DWord",
+        "multiplier": 0.01
+      }
     },
     {
       "name": "Energy CT2",
@@ -245,9 +302,12 @@
       "minValue": 0,
       "maxValue": 999999999,
       "units": "W",
-      "dataType": "DWord",
-      "multiplier": 0.01,
-      "rw": "rw"
+      "rw": "rw",
+      "decode": {
+        "length": 2,
+        "dataType": "DWord",
+        "multiplier": 0.01
+      }
     },
     {
       "name": "Energy CT3",
@@ -257,9 +317,12 @@
       "minValue": 0,
       "maxValue": 999999999,
       "units": "W",
-      "dataType": "DWord",
-      "multiplier": 0.01,
-      "rw": "rw"
+      "rw": "rw",
+      "decode": {
+        "length": 2,
+        "dataType": "DWord",
+        "multiplier": 0.01
+      }
     },
     {
       "name": "Energy CT4",
@@ -269,9 +332,12 @@
       "minValue": 0,
       "maxValue": 999999999,
       "units": "W",
-      "dataType": "DWord",
-      "multiplier": 0.01,
-      "rw": "rw"
+      "rw": "rw",
+      "decode": {
+        "length": 2,
+        "dataType": "DWord",
+        "multiplier": 0.01
+      }
     },
     {
       "name": "Energy CT5",
@@ -281,9 +347,12 @@
       "minValue": 0,
       "maxValue": 999999999,
       "units": "W",
-      "dataType": "DWord",
-      "multiplier": 0.01,
-      "rw": "rw"
+      "rw": "rw",
+      "decode": {
+        "length": 2,
+        "dataType": "DWord",
+        "multiplier": 0.01
+      }
     },
     {
       "name": "Energy CT6",
@@ -293,9 +362,12 @@
       "minValue": 0,
       "maxValue": 999999999,
       "units": "W",
-      "dataType": "DWord",
-      "multiplier": 0.01,
-      "rw": "rw"
+      "rw": "rw",
+      "decode": {
+        "length": 2,
+        "dataType": "DWord",
+        "multiplier": 0.01
+      }
     },
     {
       "name": "Energy CT7",
@@ -305,9 +377,12 @@
       "minValue": 0,
       "maxValue": 999999999,
       "units": "W",
-      "dataType": "DWord",
-      "multiplier": 0.01,
-      "rw": "rw"
+      "rw": "rw",
+      "decode": {
+        "length": 2,
+        "dataType": "DWord",
+        "multiplier": 0.01
+      }
     },
     {
       "name": "Energy CT8",
@@ -317,9 +392,12 @@
       "minValue": 0,
       "maxValue": 999999999,
       "units": "W",
-      "dataType": "DWord",
-      "multiplier": 0.01,
-      "rw": "rw"
+      "rw": "rw",
+      "decode": {
+        "length": 2,
+        "dataType": "DWord",
+        "multiplier": 0.01
+      }
     },
     {
       "name": "Energy CT9",
@@ -329,9 +407,12 @@
       "minValue": 0,
       "maxValue": 999999999,
       "units": "W",
-      "dataType": "DWord",
-      "multiplier": 0.01,
-      "rw": "rw"
+      "rw": "rw",
+      "decode": {
+        "length": 2,
+        "dataType": "DWord",
+        "multiplier": 0.01
+      }
     },
     {
       "name": "Energy CT10",
@@ -341,9 +422,12 @@
       "minValue": 0,
       "maxValue": 999999999,
       "units": "W",
-      "dataType": "DWord",
-      "multiplier": 0.01,
-      "rw": "rw"
+      "rw": "rw",
+      "decode": {
+        "length": 2,
+        "dataType": "DWord",
+        "multiplier": 0.01
+      }
     },
     {
       "name": "Energy CT11",
@@ -353,9 +437,12 @@
       "minValue": 0,
       "maxValue": 999999999,
       "units": "W",
-      "dataType": "DWord",
-      "multiplier": 0.01,
-      "rw": "rw"
+      "rw": "rw",
+      "decode": {
+        "length": 2,
+        "dataType": "DWord",
+        "multiplier": 0.01
+      }
     },
     {
       "name": "Energy CT12",
@@ -365,9 +452,12 @@
       "minValue": 0,
       "maxValue": 999999999,
       "units": "W",
-      "dataType": "DWord",
-      "multiplier": 0.01,
-      "rw": "rw"
+      "rw": "rw",
+      "decode": {
+        "length": 2,
+        "dataType": "DWord",
+        "multiplier": 0.01
+      }
     },
     {
       "name": "Energy CT13",
@@ -377,9 +467,12 @@
       "minValue": 0,
       "maxValue": 999999999,
       "units": "W",
-      "dataType": "DWord",
-      "multiplier": 0.01,
-      "rw": "rw"
+      "rw": "rw",
+      "decode": {
+        "length": 2,
+        "dataType": "DWord",
+        "multiplier": 0.01
+      }
     },
     {
       "name": "Energy CT14",
@@ -389,9 +482,12 @@
       "minValue": 0,
       "maxValue": 999999999,
       "units": "W",
-      "dataType": "DWord",
-      "multiplier": 0.01,
-      "rw": "rw"
+      "rw": "rw",
+      "decode": {
+        "length": 2,
+        "dataType": "DWord",
+        "multiplier": 0.01
+      }
     },
     {
       "name": "Energy CT15",
@@ -401,9 +497,12 @@
       "minValue": 0,
       "maxValue": 999999999,
       "units": "W",
-      "dataType": "DWord",
-      "multiplier": 0.01,
-      "rw": "rw"
+      "rw": "rw",
+      "decode": {
+        "length": 2,
+        "dataType": "DWord",
+        "multiplier": 0.01
+      }
     },
     {
       "name": "Energy CT16",
@@ -413,9 +512,12 @@
       "minValue": 0,
       "maxValue": 999999999,
       "units": "W",
-      "dataType": "DWord",
-      "multiplier": 0.01,
-      "rw": "rw"
+      "rw": "rw",
+      "decode": {
+        "length": 2,
+        "dataType": "DWord",
+        "multiplier": 0.01
+      }
     },
     {
       "name": "Energy CT17",
@@ -425,9 +527,12 @@
       "minValue": 0,
       "maxValue": 999999999,
       "units": "W",
-      "dataType": "DWord",
-      "multiplier": 0.01,
-      "rw": "rw"
+      "rw": "rw",
+      "decode": {
+        "length": 2,
+        "dataType": "DWord",
+        "multiplier": 0.01
+      }
     },
     {
       "name": "Energy CT18",
@@ -437,9 +542,12 @@
       "minValue": 0,
       "maxValue": 999999999,
       "units": "W",
-      "dataType": "DWord",
-      "multiplier": 0.01,
-      "rw": "rw"
+      "rw": "rw",
+      "decode": {
+        "length": 2,
+        "dataType": "DWord",
+        "multiplier": 0.01
+      }
     },
     {
       "name": "Total Energy All CTs",
@@ -449,11 +557,13 @@
       "minValue": 0,
       "maxValue": 999999999,
       "units": "W",
-      "dataType": "DWord",
-      "multiplier": 0.01,
-      "rw": "rw"
+      "rw": "rw",
+      "decode": {
+        "length": 2,
+        "dataType": "DWord",
+        "multiplier": 0.01
+      }
     },
-
     {
       "name": "Power Factor",
       "dataKey": "value2",
@@ -462,9 +572,12 @@
       "minValue": 0,
       "maxValue": 100,
       "units": "pF",
-      "dataType": "Word",
-      "multiplier": 1,
-      "rw": "rw"
+      "rw": "rw",
+      "decode": {
+        "length": 1,
+        "dataType": "Word",
+        "multiplier": 1
+      }
     },
     {
       "name": "Voltage",
@@ -474,9 +587,12 @@
       "minValue": 0,
       "maxValue": 250,
       "units": "V",
-      "dataType": "Word",
-      "multiplier": 1,
-      "rw": "rw"
+      "rw": "rw",
+      "decode": {
+        "length": 1,
+        "dataType": "Word",
+        "multiplier": 1
+      }
     },
     {
       "name": "Device Address",
@@ -486,9 +602,12 @@
       "minValue": 0,
       "maxValue": "FF",
       "units": "addr",
-      "dataType": "Word",
-      "multiplier": 1,
-      "rw": "rw"
+      "rw": "rw",
+      "decode": {
+        "length": 1,
+        "dataType": "Word",
+        "multiplier": 1
+      }
     },
     {
       "name": "BaudRate",
@@ -498,9 +617,12 @@
       "minValue": 0,
       "maxValue": 6,
       "units": "bps",
-      "dataType": "Word",
-      "multiplier": 1,
-      "rw": "rw"
+      "rw": "rw",
+      "decode": {
+        "length": 1,
+        "dataType": "Word",
+        "multiplier": 1
+      }
     }
   ]
 }

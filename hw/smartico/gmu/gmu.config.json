@@ -28,87 +28,99 @@
       "name": "Status 1",
       "dataKey": "status1",
       "units": "Bitmap",
-      "dataType": "Bitmap",
       "description": "Gas meter status #1",
-      "bitLabels": [
-        "FLG_LOW_BAT",
-        "FLG_MOTION_DETECT",
-        "FLG_MAGNET_DETECT",
-        "FLG_TAMPER_DETECT",
-        "STS_VALVE_1",
-        "STS_VALVE_2",
-        "STS_VALVE_3",
-        "FLG_ERR_OVERFLOW"
-      ],
-      "decodeLength": 1,
+      "decode": {
+        "length": 1,
+        "dataType": "Bitmap",
+        "bitLabels": [
+          "FLG_LOW_BAT",
+          "FLG_MOTION_DETECT",
+          "FLG_MAGNET_DETECT",
+          "FLG_TAMPER_DETECT",
+          "STS_VALVE_1",
+          "STS_VALVE_2",
+          "STS_VALVE_3",
+          "FLG_ERR_OVERFLOW"
+        ]
+      },
       "address": "00"
     },
     {
       "name": "Status 2",
       "dataKey": "status2",
       "units": "Bitmap",
-      "dataType": "Bitmap",
       "description": "Gas meter status #2",
-      "bitLabels": [
-        "FLG_ERR_REVERSE",
-        "FLG_ERR_SENSOR",
-        "FLG_ERR_GAS",
-        "FLG_ERR_TIME",
-        "RESERVED",
-        "FLG_POWER_ON",
-        "FLG_LOCK",
-        "FLG_CFG_DONE"
-      ],
-      "decodeLength": 1,
+      "decode": {
+        "length": 1,
+        "dataType": "Bitmap",
+        "bitLabels": [
+          "FLG_ERR_REVERSE",
+          "FLG_ERR_SENSOR",
+          "FLG_ERR_GAS",
+          "FLG_ERR_TIME",
+          "RESERVED",
+          "FLG_POWER_ON",
+          "FLG_LOCK",
+          "FLG_CFG_DONE"
+        ]
+      },
       "address": "01"
     },
     {
       "name": "Model",
       "dataKey": "Model",
       "units": "Bitmap",
-      "dataType": "Bitmap",
+      "address": "02",
       "description": "Gas meter model",
-      "bitLabels": [
-        "METER_CLASS_0",
-        "METER_CLASS_1",
-        "METER_CLASS_2",
-        "METER_UNITS",
-        "Reserved_4",
-        "Reserved_5",
-        "Reserved_6",
-        "Reserved_7"
-      ],
-      "decodeLength": 1,
-      "address": "02"
+      "decode": {
+        "length": 1,
+        "dataType": "Bitmap",
+        "bitLabels": [
+          "METER_CLASS_0",
+          "METER_CLASS_1",
+          "METER_CLASS_2",
+          "METER_UNITS",
+          "Reserved_4",
+          "Reserved_5",
+          "Reserved_6",
+          "Reserved_7"
+        ]
+      }
     },
     {
       "name": "Serial",
       "dataKey": "Serial",
       "units": "",
-      "dataType": "Hex",
+      "address": "03",
       "description": "Serial number (hex string, 3 bytes)",
-      "decodeLength": 3,
-      "address": "03"
+      "decode": {
+        "length": 3,
+        "dataType": "Hex"
+      }
     },
     {
       "name": "Volume",
       "dataKey": "Volume",
       "units": "m³",
-      "dataType": "Integer",
-      "multiplier": 0.001,
+      "address": "06",
       "description": "Total volume, unsigned integer, divide by 1000 for value in m³",
-      "decodeLength": 4,
-      "address": "06"
+      "decode": {
+        "length": 4,
+        "dataType": "DoubleWord",
+        "multiplier": 0.001
+      }
     },
     {
       "name": "Temp",
       "dataKey": "Temp",
       "units": "°C",
-      "dataType": "Integer",
-      "multiplier": 0.01,
-      "description": "Temperature (optional, only if payload is 12 bytes)",
-      "decodeLength": 2,
-      "address": "0A"
+      "address": "0A",
+      "description": "Temperature (optional), signed integer",
+      "decode": {
+        "length": 2,
+        "dataType": "SignedWord",
+        "multiplier": 1
+      }
     }
   ]
 }

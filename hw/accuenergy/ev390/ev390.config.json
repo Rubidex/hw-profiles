@@ -12,280 +12,326 @@
     {
       "name": "Phase Voltage U1",
       "dataKey": "phase_voltage_u1",
-      "addressType": "Register",
       "address": "0110",
       "minValue": 0,
       "maxValue": 65535,
       "units": "V",
-      "dataType": "Word",
-      "multiplier": 1,
-      "rw": "r"
+      "rw": "r",
+      "decode": {
+        "dataType": "Word",
+        "multiplier": 1,
+        "addressType": "Register"
+      }
     },
     {
       "name": "Phase Voltage U2",
       "dataKey": "phase_voltage_u2",
-      "addressType": "Register",
       "address": "0111",
       "minValue": 0,
       "maxValue": 65535,
       "units": "V",
-      "dataType": "Word",
-      "multiplier": 1,
-      "rw": "r"
+      "rw": "r",
+      "decode": {
+        "dataType": "Word",
+        "multiplier": 1,
+        "addressType": "Register"
+      }
     },
     {
       "name": "Phase Voltage U3",
       "dataKey": "phase_voltage_u3",
-      "addressType": "Register",
       "address": "0112",
       "minValue": 0,
       "maxValue": 65535,
       "units": "V",
-      "dataType": "Word",
-      "multiplier": 1,
-      "rw": "r"
+      "rw": "r",
+      "decode": {
+        "dataType": "Word",
+        "multiplier": 1,
+        "addressType": "Register"
+      }
     },
     {
       "name": "Line Voltage U12",
       "dataKey": "line_voltage_u12",
-      "addressType": "Register",
       "address": "0113",
       "minValue": 0,
       "maxValue": 65535,
       "units": "V",
-      "dataType": "Word",
-      "multiplier": 1,
-      "rw": "r"
+      "rw": "r",
+      "decode": {
+        "dataType": "Word",
+        "multiplier": 1,
+        "addressType": "Register"
+      }
     },
     {
       "name": "Line Voltage U23",
       "dataKey": "line_voltage_u23",
-      "addressType": "Register",
       "address": "0114",
       "minValue": 0,
       "maxValue": 65535,
       "units": "V",
-      "dataType": "Word",
-      "multiplier": 1,
-      "rw": "r"
+      "rw": "r",
+      "decode": {
+        "dataType": "Word",
+        "multiplier": 1,
+        "addressType": "Register"
+      }
     },
     {
       "name": "Line Voltage U31",
       "dataKey": "line_voltage_u31",
-      "addressType": "Register",
       "address": "0115",
       "minValue": 0,
       "maxValue": 65535,
       "units": "V",
-      "dataType": "Word",
-      "multiplier": 1,
-      "rw": "r"
+      "rw": "r",
+      "decode": {
+        "dataType": "Word",
+        "multiplier": 1,
+        "addressType": "Register"
+      }
     },
     {
       "name": "Current I1",
       "dataKey": "current_i1",
-      "addressType": "Register",
       "address": "0116",
       "minValue": 0,
       "maxValue": 65535,
       "units": "A",
-      "dataType": "Word",
-      "multiplier": 1,
-      "rw": "r"
+      "rw": "r",
+      "decode": {
+        "dataType": "Word",
+        "multiplier": 1,
+        "addressType": "Register"
+      }
     },
     {
       "name": "Current I2",
       "dataKey": "current_i2",
-      "addressType": "Register",
       "address": "0117",
       "minValue": 0,
       "maxValue": 65535,
       "units": "A",
-      "dataType": "Word",
-      "multiplier": 1,
-      "rw": "r"
+      "rw": "r",
+      "decode": {
+        "dataType": "Word",
+        "multiplier": 1,
+        "addressType": "Register"
+      }
     },
     {
       "name": "Current I3",
       "dataKey": "current_i3",
-      "addressType": "Register",
       "address": "0118",
       "minValue": 0,
       "maxValue": 65535,
       "units": "A",
-      "dataType": "Word",
-      "multiplier": 1,
-      "rw": "r"
+      "rw": "r",
+      "decode": {
+        "dataType": "Word",
+        "multiplier": 1,
+        "addressType": "Register"
+      }
     },
     {
       "name": "Average Phase Voltage Uavg",
       "dataKey": "phase_voltage_uavg",
-      "addressType": "Register",
       "address": "0119",
       "minValue": 0,
       "maxValue": 65535,
       "units": "V",
-      "dataType": "Word",
-      "multiplier": 1,
-      "rw": "r"
+      "rw": "r",
+      "decode": {
+        "dataType": "Word",
+        "multiplier": 1,
+        "addressType": "Register"
+      }
     },
     {
       "name": "Average Line Voltage Ulavg",
       "dataKey": "line_voltage_ulavg",
-      "addressType": "Register",
       "address": "011a",
       "minValue": 0,
       "maxValue": 65535,
       "units": "V",
-      "dataType": "Word",
-      "multiplier": 1,
-      "rw": "r"
+      "rw": "r",
+      "decode": {
+        "dataType": "Word",
+        "multiplier": 1,
+        "addressType": "Register"
+      }
     },
     {
       "name": "Average Current Iavg",
       "dataKey": "current_iavg",
-      "addressType": "Register",
       "address": "011b",
       "minValue": 0,
       "maxValue": 65535,
       "units": "A",
-      "dataType": "Word",
-      "multiplier": 1,
-      "rw": "r"
+      "rw": "r",
+      "decode": {
+        "dataType": "Word",
+        "multiplier": 1,
+        "addressType": "Register"
+      }
     },
     {
       "name": "Power",
       "dataKey": "power",
-      "addressType": "Register",
       "address": "011c",
       "minValue": -32768,
       "maxValue": 32767,
       "units": "W",
-      "dataType": "Integer",
-      "multiplier": 1,
-      "rw": "r"
+      "rw": "r",
+      "decode": {
+        "dataType": "Integer",
+        "multiplier": 1,
+        "addressType": "Register"
+      }
     },
     {
       "name": "Reactive Power Q",
       "dataKey": "reactive_power_q",
-      "addressType": "Register",
       "address": "011d",
       "minValue": -32768,
       "maxValue": 32767,
       "units": "VAR",
-      "dataType": "Integer",
-      "multiplier": 1,
-      "rw": "r"
+      "rw": "r",
+      "decode": {
+        "dataType": "Integer",
+        "multiplier": 1,
+        "addressType": "Register"
+      }
     },
     {
       "name": "Apparent Power S",
       "dataKey": "apparent_power_s",
-      "addressType": "Register",
       "address": "011e",
       "minValue": 0,
       "maxValue": 65535,
       "units": "VA",
-      "dataType": "Word",
-      "multiplier": 1,
-      "rw": "r"
+      "rw": "r",
+      "decode": {
+        "dataType": "Word",
+        "multiplier": 1,
+        "addressType": "Register"
+      }
     },
     {
       "name": "Frequency F",
       "dataKey": "frequency_f",
-      "addressType": "Register",
       "address": "011f",
       "minValue": 4400,
       "maxValue": 6500,
       "units": "Hz",
-      "dataType": "Word",
-      "multiplier": 1,
-      "rw": "r"
+      "rw": "r",
+      "decode": {
+        "dataType": "Word",
+        "multiplier": 1,
+        "addressType": "Register"
+      }
     },
     {
       "name": "Power Factor PF",
       "dataKey": "power_factor_pf",
-      "addressType": "Register",
       "address": "0120",
       "minValue": -1000,
       "maxValue": 1000,
       "units": "",
-      "dataType": "Integer",
-      "multiplier": 1,
-      "rw": "r"
+      "rw": "r",
+      "decode": {
+        "dataType": "Integer",
+        "multiplier": 1,
+        "addressType": "Register"
+      }
     },
     {
       "name": "Load Nature RT",
       "dataKey": "load_nature_rt",
-      "addressType": "Register",
       "address": "0121",
       "minValue": 76,
       "maxValue": 82,
       "units": "",
-      "dataType": "Word",
-      "multiplier": 1,
-      "rw": "r"
+      "rw": "r",
+      "decode": {
+        "dataType": "Word",
+        "multiplier": 1,
+        "addressType": "Register"
+      }
     },
     {
       "name": "Analog Output 1 AO1",
       "dataKey": "analog_output_ao1",
-      "addressType": "Register",
       "address": "0122",
       "minValue": 0,
       "maxValue": 65535,
       "units": "",
-      "dataType": "Word",
-      "multiplier": 1,
-      "rw": "r"
+      "rw": "r",
+      "decode": {
+        "dataType": "Word",
+        "multiplier": 1,
+        "addressType": "Register"
+      }
     },
     {
       "name": "Analog Output 2 AO2",
       "dataKey": "analog_output_ao2",
-      "addressType": "Register",
       "address": "0123",
       "minValue": 0,
       "maxValue": 65535,
       "units": "",
-      "dataType": "Word",
-      "multiplier": 1,
-      "rw": "r"
+      "rw": "r",
+      "decode": {
+        "dataType": "Word",
+        "multiplier": 1,
+        "addressType": "Register"
+      }
     },
     {
       "name": "Neutral Current In",
       "dataKey": "neutral_current_in",
-      "addressType": "Register",
       "address": "0124",
       "minValue": 0,
       "maxValue": 65535,
       "units": "A",
-      "dataType": "Word",
-      "multiplier": 1,
-      "rw": "r"
+      "rw": "r",
+      "decode": {
+        "dataType": "Word",
+        "multiplier": 1,
+        "addressType": "Register"
+      }
     },
     {
       "name": "Energy",
       "dataKey": "energy",
-      "addressType": "DRegister",
       "address": "010c",
       "address2": "010d",
       "minValue": 0,
       "maxValue": 999999999,
       "units": "Wh",
-      "dataType": "DoubleWord",
-      "multiplier": 1,
-      "rw": "r"
+      "rw": "r",
+      "decode": {
+        "dataType": "DoubleWord",
+        "multiplier": 1,
+        "addressType": "DRegister"
+      }
     },
     {
       "name": "Reactive Energy Eq",
       "dataKey": "reactive_energy_eq",
-      "addressType": "DRegister",
       "address": "010e",
       "address2": "010f",
       "minValue": 0,
       "maxValue": 999999999,
       "units": "VARh",
-      "dataType": "DoubleWord",
-      "multiplier": 1,
-      "rw": "r"
+      "rw": "r",
+      "decode": {
+        "dataType": "DoubleWord",
+        "multiplier": 1,
+        "addressType": "DRegister"
+      }
     }
   ]
 }

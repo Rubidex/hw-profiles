@@ -56,7 +56,7 @@ The `registers` section is an array of objects, each representing a register of 
 - `multiplier`: A multiplier applied to the raw value to get the actual value.
 - `rw`: Indicates if the register is readable ("r"), writable ("w"), or both ("rw").
 - `reportInterval`: The interval, in seconds, at which the device reports the value.
-- `decodeLength`: The length of the value in bytes or words.
+- `length`: The length of the value in bytes or words.
 - `states`: (Optional) A mapping of possible values to human-readable states.
 - `display`: (Optional) If false, the register is hidden from UI.
 
@@ -117,7 +117,7 @@ The `commands` section (optional) is an array of objects, each representing a co
       "multiplier": 1,
       "rw": "r",
       "reportInterval": 21600,
-      "decodeLength": 1
+      "length": 1
     }
     // ... more registers ...
   ],
