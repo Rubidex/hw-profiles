@@ -75,7 +75,8 @@
       "decode": {
         "length": 1,
         "addressType": "Register",
-        "dataType": "Byte"
+        "dataType": "Byte",
+        "multiplier": 0.5
       }
     },
     {

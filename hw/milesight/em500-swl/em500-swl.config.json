@@ -66,8 +66,8 @@
   "commands": [
     {
       "name": "Set Reporting Interval",
+      "type": "input",
       "description": "Set the reporting interval for the sensor",
-      "topic": "/devices/milesight/em500-swl/commands",
       "payloadTemplate": {
         "devEui": "{{devEui}}",
         "registerAddress": "FF03",
